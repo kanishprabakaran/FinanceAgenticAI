@@ -63,8 +63,7 @@ git clone https://github.com/your-username/stock-analysis-orchestrator.git
 cd stock-analysis-orchestrator
 pip install -r requirements.txt
 
----
+## 🎥 Watch the Stock Analysis Demo
 
-## Watch the Stock Analysis Demo
-- https://www.youtube.com/watch?v=2FInIgDFeak
+[Watch the Stock Analysis Demo on YouTube](https://www.youtube.com/watch?v=2FInIgDFeak)
 
