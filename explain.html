@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Analysis System Workflows</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@11.6.0/dist/mermaid.min.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        .workflow {
+            flex: 1;
+            min-width: 500px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .mermaid {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 15px 0;
+            border: 1px solid #ddd;
+            overflow: auto;
+        }
+        .legend {
+            background: #e8f4fc;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .step {
+            margin: 15px 0;
+            padding-left: 20px;
+            border-left: 3px solid #3498db;
+        }
+        code {
+            background: #f0f0f0;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>Financial Analysis System Workflows</h1>
+    
+    <div class="container">
+        <div class="workflow">
+            <h2>app.py - Client Application</h2>
+            <pre class="mermaid">
+flowchart TD
+    A[User Input] --> B{Input Type?}
+    B -->|Text| C[Sanitize Prompt]
+    B -->|Voice| D[Record Audio]
+    D --> E[Upload to S3]
+    E --> F[Transcribe with AWS]
+    F --> G[Get Transcript]
+    C --> H[Classify Intent]
+    G --> H
+    H --> I[Route to Agent]
+    I -->|Financial| J[Finance Agent]
+    I -->|News| K[News Agent]
+    I -->|Macro| L[Macro Agent]
+    J --> M[Generate Response]
+    K --> M
+    L --> M
+    M --> N[Output to CLI]
+            </pre>
+            
+            <div class="step">
+                <strong>1. Input Handling:</strong>
+                <p>Accepts both text and voice input via <code>sounddevice</code> (WAV) or direct text.</p>
+            </div>
+            
+            <div class="step">
+                <strong>2. AWS Pipeline:</strong>
+                <p>Voice files processed through:<br>
+                <code>S3 Upload → Transcribe Job → JSON Transcript</code></p>
+            </div>
+            
+            <div class="step">
+                <strong>3. AI Routing:</strong>
+                <p>Gemini classifies intent into:<br>
+                - Stock analysis (YFinance)<br>
+                - News aggregation (NewsAPI + YouTube)<br>
+                - Economic data (World Bank)</p>
+            </div>
+        </div>
+        
+        <div class="workflow">
+            <h2>newsfeed.py - Server Backend</h2>
+            <pre class="mermaid">
+flowchart TD
+    A[Start] --> B[Search YouTube API]
+    B --> C{Videos Found?}
+    C -->|Yes| D[Process Each Video]
+    D --> E[Try YouTube Transcript]
+    E --> F{Success?}
+    F -->|No| G[Download Audio]
+    G --> H[Upload to S3]
+    H --> I[Start Transcribe Job]
+    I --> J[Poll Status]
+    J --> K[Get Transcript]
+    F -->|Yes| K
+    K --> L[Summarize with Gemini]
+    L --> M[Update Google Sheets]
+    M --> N[Clean S3 Files]
+    C -->|No| O[Log Error]
+            </pre>
+            
+            <div class="step">
+                <strong>1. Scheduling:</strong>
+                <p>Runs hourly via <code>schedule</code> lib with:<br>
+                - Immediate first run<br>
+                - 60-second polling interval</p>
+            </div>
+            
+            <div class="step">
+                <strong>2. Fallback System:</strong>
+                <p>Transcript pipeline attempts:<br>
+                1. Native YouTube captions<br>
+                2. AWS Transcribe fallback<br>
+                3. Gemini summarization</p>
+            </div>
+            
+            <div class="step">
+                <strong>3. Data Flow:</strong>
+                <p>Final output to Google Sheets includes:<br>
+                - Video metadata<br>
+                - Processing method<br>
+                - AI summary<br>
+                - Timestamps</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="legend">
+        <h3>System Integration</h3>
+        <pre class="mermaid">
+flowchart LR
+    newsfeed.py -->|Curated Data| GS[Google Sheets]
+    app.py -->|Live Queries| GS
+    Both -->|Auth| GCP[Google Cloud]
+    Both -->|Storage| AWS
+        </pre>
+        <p>Shared services enable real-time synchronization while maintaining separation of concerns.</p>
+    </div>
+
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'default',
+            flowchart: {
+                useMaxWidth: false,
+                htmlLabels: true,
+                curve: 'basis',
+                diagramPadding: 20
+            },
+            securityLevel: 'loose'
+        });
+    </script>
+</body>
+</html>
