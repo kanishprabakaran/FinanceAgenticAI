@@ -1,0 +1,570 @@
+2025-05-15 14:51:13,360 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-05-15 14:51:13,362 - INFO - Scheduler initialized at 2025-05-15 14:51:13
+2025-05-15 14:51:13,363 - INFO - News processing will run every hour
+2025-05-15 14:51:13,363 - INFO - Starting news processing at 2025-05-15 14:51:13
+2025-05-15 14:51:14,154 - INFO - Found 0 videos from channel UCupvZG-5ko_eiXAupbDfxWw
+2025-05-15 14:51:16,241 - INFO - Found 5 videos from channel UCBi2mrWuNuyYy4gbM6fU18Q
+2025-05-15 14:51:17,669 - INFO - Found 0 videos from channel UCeY0bbntWzzVIaj2z3QigXg
+2025-05-15 14:51:19,709 - INFO - Found 5 videos from channel UC16niRr50-MSBwiO3YDb3RA
+2025-05-15 14:51:21,132 - INFO - Found 0 videos from channel UCNye-wNBqNL5ZzHSJj3l8Bg
+2025-05-15 14:51:23,021 - INFO - Found 3 videos from channel UCIRYBXDze5krPDzAEOxFGVA
+2025-05-15 14:51:24,701 - INFO - Found 2 videos from channel UCJg9wBPyKMNA5sRDnvzmkdg
+2025-05-15 14:51:26,112 - INFO - Found 0 videos from channel UCUMZ7gohGI9HcU9VNsr2FJQ
+2025-05-15 14:51:28,106 - INFO - Found 5 videos from channel UChqUTb7kYRX8-EiaN3XFrSQ
+2025-05-15 14:51:30,123 - INFO - Found 5 videos from channel UCXIJgqnII2ZOINSWNOGFThA
+2025-05-15 14:51:31,136 - INFO - Processing video: Trump receives a special welcome from Qatari F-15 jets #shorts #fox #news #us #trump #world
+2025-05-15 14:51:32,052 - INFO - No YouTube transcript available. Falling back to AWS transcription...
+2025-05-15 14:51:32,843 - INFO - downloading (237416 total bytes) file to buffer
+2025-05-15 14:51:33,331 - INFO - Downloaded audio from: Trump receives a special welcome from Qatari F-15 jets #shorts #fox #news #us #trump #world
+2025-05-15 14:51:35,516 - INFO - Successfully uploaded news_audio_ca7a9e03116f42e491dbfa786a390332.mp3 to S3 bucket ytbucket-007
+2025-05-15 14:51:36,849 - INFO - Waiting for transcription to complete...
+2025-05-15 14:52:08,770 - INFO - Transcription completed successfully
+2025-05-15 14:52:08,774 - WARNING - Failed to transcribe audio. Skipping video
+2025-05-15 14:52:08,775 - INFO - Processing video: Qatar rolls out the red carpet for Trump&#39;s arrival—literally #news #trump #politics #shorts #world
+2025-05-15 14:52:09,860 - INFO - No YouTube transcript available. Falling back to AWS transcription...
+2025-05-15 14:52:10,610 - INFO - downloading (582727 total bytes) file to buffer
+2025-05-15 14:52:11,140 - INFO - Downloaded audio from: Qatar rolls out the red carpet for Trump's arrival—literally #news #trump #politics #shorts #world
+2025-05-15 14:52:13,562 - INFO - Successfully uploaded news_audio_755ca230a8dd4440836e84ee70541297.mp3 to S3 bucket ytbucket-007
+2025-05-15 14:52:14,886 - INFO - Waiting for transcription to complete...
+2025-05-15 14:52:46,851 - INFO - Transcription completed successfully
+2025-05-15 14:52:46,853 - WARNING - Failed to transcribe audio. Skipping video
+2025-05-15 14:52:46,853 - INFO - Processing video: Trump wowed by Qatar&#39;s Royal Palace #foxnews #news #us #fox #trump #qatar #shorts #politics #world
+2025-05-15 14:52:47,636 - INFO - Successfully retrieved transcript for video N3kGW0UEZbw
+2025-05-15 14:52:49,985 - INFO - Summary:
+- A construction professional praised the high quality ("perfecto") of the marble work at a location.
+- The beauty of the location was highlighted, specifically mentioning the impressive marble.
+- The visitor expressed appreciation for the camels present at the location.
+- A warm welcome ("some greeting") was acknowledged and appreciated.
+
+2025-05-15 14:52:49,992 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-05-15 14:52:51,586 - INFO - Updated Google Sheet: 6 cells updated
+2025-05-15 14:52:51,586 - INFO - Successfully updated Google Sheet
+2025-05-15 14:52:53,598 - INFO - Processing video: Noem scolds Dems&#39; &#39;political stunt&#39; against ICE agents #shorts #news #immigration #congress #us #ice
+2025-05-15 14:52:54,501 - INFO - Successfully retrieved transcript for video nzF8w1F4vbs
+2025-05-15 14:52:55,489 - INFO - Summary:
+- A congressional department is accused of illegal activity endangering law enforcement, staff, and detainees.
+- A May 9th incident is described as a reckless "political stunt" rather than an oversight.
+- The department's actions are criticized as violating the principle of law and order.
+- The speaker condemns the department's behavior as unbecoming and harmful to America's safety.
+
+2025-05-15 14:52:55,498 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-05-15 14:52:56,652 - INFO - Updated Google Sheet: 6 cells updated
+2025-05-15 14:52:56,653 - INFO - Successfully updated Google Sheet
+2025-05-15 14:52:58,660 - INFO - Processing video: House Democrat forces impeachment vote against President Donald Trump
+2025-05-15 14:52:59,538 - INFO - Successfully retrieved transcript for video TJGUyp70C-I
+2025-05-15 14:53:00,519 - INFO - Summary:
+- A House Democrat, Representative Sheree Tenlander, introduced an impeachment resolution against President Trump.
+- The resolution lacks support from House Democratic leadership and is expected to be tabled tonight.
+-  Both Republican and Democratic leadership are likely to vote to table the resolution, ensuring its failure.
+- Rep. Tenlander plans to repeatedly introduce similar resolutions.
+
+2025-05-15 14:53:00,525 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-05-15 14:53:01,838 - INFO - Updated Google Sheet: 6 cells updated
+2025-05-15 14:53:01,839 - INFO - Successfully updated Google Sheet
+2025-05-15 14:53:04,810 - INFO - Deleted 4 files from S3
+2025-05-15 14:53:04,811 - INFO - Completed processing run at 2025-05-15 14:53:04
+2025-05-15 14:53:04,811 - INFO - Successfully processed 3 out of 5 videos
+2025-05-15 14:53:04,812 - INFO - Processing took 111.448098 seconds
+2025-05-15 15:52:05,281 - INFO - Starting news processing at 2025-05-15 15:52:05
+2025-05-15 15:52:26,358 - WARNING - Error searching channel UCupvZG-5ko_eiXAupbDfxWw: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+2025-05-15 15:52:27,899 - INFO - Found 5 videos from channel UCBi2mrWuNuyYy4gbM6fU18Q
+2025-05-15 15:52:29,172 - INFO - Found 0 videos from channel UCeY0bbntWzzVIaj2z3QigXg
+2025-05-15 15:52:31,211 - INFO - Found 5 videos from channel UC16niRr50-MSBwiO3YDb3RA
+2025-05-15 15:52:32,696 - INFO - Found 0 videos from channel UCNye-wNBqNL5ZzHSJj3l8Bg
+2025-05-15 15:52:34,609 - INFO - Found 3 videos from channel UCIRYBXDze5krPDzAEOxFGVA
+2025-05-15 15:52:36,083 - INFO - Found 0 videos from channel UCJg9wBPyKMNA5sRDnvzmkdg
+2025-05-15 15:52:37,593 - INFO - Found 0 videos from channel UCUMZ7gohGI9HcU9VNsr2FJQ
+2025-05-15 15:52:39,771 - INFO - Found 5 videos from channel UChqUTb7kYRX8-EiaN3XFrSQ
+2025-05-15 15:52:41,742 - INFO - Found 5 videos from channel UCXIJgqnII2ZOINSWNOGFThA
+2025-05-15 15:52:42,750 - INFO - Processing video: Trump receives a special welcome from Qatari F-15 jets #shorts #fox #news #us #trump #world
+2025-05-15 15:52:43,799 - INFO - No YouTube transcript available. Falling back to AWS transcription...
+2025-05-15 15:53:06,126 - INFO - downloading (237416 total bytes) file to buffer
+2025-05-15 15:53:06,636 - INFO - Downloaded audio from: Trump receives a special welcome from Qatari F-15 jets #shorts #fox #news #us #trump #world
+2025-05-15 15:53:08,834 - INFO - Successfully uploaded news_audio_908aac00b1d74fd391b8240f2edd4389.mp3 to S3 bucket ytbucket-007
+2025-05-15 15:53:10,257 - INFO - Waiting for transcription to complete...
+2025-05-15 15:53:41,317 - INFO - Waiting for transcription to complete...
+2025-05-15 15:54:13,337 - INFO - Transcription completed successfully
+2025-05-15 15:54:13,339 - WARNING - Failed to transcribe audio. Skipping video
+2025-05-15 15:54:13,339 - INFO - Processing video: Qatar rolls out the red carpet for Trump&#39;s arrival—literally #news #trump #politics #shorts #world
+2025-05-15 15:54:35,479 - INFO - No YouTube transcript available. Falling back to AWS transcription...
+2025-05-15 15:54:57,751 - INFO - downloading (582727 total bytes) file to buffer
+2025-05-15 15:54:58,403 - INFO - Downloaded audio from: Qatar rolls out the red carpet for Trump's arrival—literally #news #trump #politics #shorts #world
+2025-05-15 15:55:00,822 - INFO - Successfully uploaded news_audio_00fc3274376a4f2fae003656b90b07ed.mp3 to S3 bucket ytbucket-007
+2025-05-15 15:55:02,174 - INFO - Waiting for transcription to complete...
+2025-05-15 15:55:34,245 - INFO - Transcription completed successfully
+2025-05-15 15:55:34,247 - WARNING - Failed to transcribe audio. Skipping video
+2025-05-15 15:55:34,248 - INFO - Processing video: Trump wowed by Qatar&#39;s Royal Palace #foxnews #news #us #fox #trump #qatar #shorts #politics #world
+2025-05-15 15:55:35,350 - INFO - Successfully retrieved transcript for video N3kGW0UEZbw
+2025-05-15 15:55:37,792 - INFO - Summary:
+- A construction professional praised the high-quality marble work, describing it as "perfecto."
+- The speaker expressed appreciation for the overall beauty of the location.
+- The presence of camels was noted and admired.
+-  A welcoming greeting was acknowledged and appreciated.
+
+2025-05-15 15:55:37,794 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-05-15 15:55:59,618 - ERROR - Error updating Google Sheet: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+2025-05-15 15:55:59,619 - WARNING - Failed to update Google Sheet
+2025-05-15 15:56:01,628 - INFO - Processing video: Noem scolds Dems&#39; &#39;political stunt&#39; against ICE agents #shorts #news #immigration #congress #us #ice
+2025-05-15 15:56:03,110 - INFO - Successfully retrieved transcript for video nzF8w1F4vbs
+2025-05-15 15:56:04,163 - INFO - Summary:
+- A congressional department is accused of illegal activity endangering law enforcement, staff, and detainees.
+- A May 9th incident is described as a politically motivated stunt, not an oversight.
+- The department's actions are deemed to violate principles of law and order.
+- The criticism alleges the department's behavior is unacceptable and undermines national safety.
+
+2025-05-15 15:56:04,166 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-05-15 15:56:06,072 - INFO - Updated Google Sheet: 6 cells updated
+2025-05-15 15:56:06,072 - INFO - Successfully updated Google Sheet
+2025-05-15 15:56:08,085 - INFO - Processing video: House Democrat forces impeachment vote against President Donald Trump
+2025-05-15 15:56:09,405 - INFO - Successfully retrieved transcript for video TJGUyp70C-I
+2025-05-15 15:56:10,476 - INFO - Summary:
+- House Democrat Representative Sheree Tenlander introduced a resolution to impeach President Trump.
+- The resolution lacks support from House Democratic leadership and is expected to be tabled tonight.
+-  Both Republican and Democratic House members are likely to vote to table the resolution.
+- Rep. Tenlander plans to repeatedly introduce impeachment resolutions despite the lack of current support.
+
+2025-05-15 15:56:10,480 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-05-15 15:56:11,961 - INFO - Updated Google Sheet: 6 cells updated
+2025-05-15 15:56:11,962 - INFO - Successfully updated Google Sheet
+2025-05-15 15:56:15,079 - INFO - Deleted 4 files from S3
+2025-05-15 15:56:15,079 - INFO - Completed processing run at 2025-05-15 15:56:15
+2025-05-15 15:56:15,079 - INFO - Successfully processed 2 out of 5 videos
+2025-05-15 15:56:15,080 - INFO - Processing took 249.797472 seconds
+2025-05-15 16:56:15,522 - INFO - Starting news processing at 2025-05-15 16:56:15
+2025-05-15 16:56:36,606 - WARNING - Error searching channel UCupvZG-5ko_eiXAupbDfxWw: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+2025-05-15 16:56:38,127 - INFO - Found 5 videos from channel UCBi2mrWuNuyYy4gbM6fU18Q
+2025-05-15 16:56:39,556 - INFO - Found 0 videos from channel UCeY0bbntWzzVIaj2z3QigXg
+2025-05-15 16:56:41,735 - INFO - Found 5 videos from channel UC16niRr50-MSBwiO3YDb3RA
+2025-05-15 16:56:43,177 - INFO - Found 0 videos from channel UCNye-wNBqNL5ZzHSJj3l8Bg
+2025-05-15 16:56:44,771 - INFO - Found 1 videos from channel UCIRYBXDze5krPDzAEOxFGVA
+2025-05-15 16:56:46,567 - INFO - Found 2 videos from channel UCJg9wBPyKMNA5sRDnvzmkdg
+2025-05-15 16:56:47,806 - INFO - Found 0 videos from channel UCUMZ7gohGI9HcU9VNsr2FJQ
+2025-05-15 16:56:50,007 - INFO - Found 5 videos from channel UChqUTb7kYRX8-EiaN3XFrSQ
+2025-05-15 16:56:52,187 - INFO - Found 5 videos from channel UCXIJgqnII2ZOINSWNOGFThA
+2025-05-15 16:56:53,191 - INFO - Processing video: Trump receives a special welcome from Qatari F-15 jets #shorts #fox #news #us #trump #world
+2025-05-15 16:57:15,476 - INFO - No YouTube transcript available. Falling back to AWS transcription...
+2025-05-15 16:57:16,722 - INFO - downloading (237416 total bytes) file to buffer
+2025-05-15 16:57:17,259 - INFO - Downloaded audio from: Trump receives a special welcome from Qatari F-15 jets #shorts #fox #news #us #trump #world
+2025-05-15 16:57:19,322 - INFO - Successfully uploaded news_audio_09c5c7b72e54448f924e3022695de766.mp3 to S3 bucket ytbucket-007
+2025-05-15 16:57:20,685 - INFO - Waiting for transcription to complete...
+2025-05-15 16:57:52,616 - INFO - Transcription completed successfully
+2025-05-15 16:57:52,619 - WARNING - Failed to transcribe audio. Skipping video
+2025-05-15 16:57:52,619 - INFO - Processing video: Qatar rolls out the red carpet for Trump&#39;s arrival—literally #news #trump #politics #shorts #world
+2025-05-15 16:57:53,683 - INFO - No YouTube transcript available. Falling back to AWS transcription...
+2025-05-15 16:57:54,926 - INFO - downloading (582727 total bytes) file to buffer
+2025-05-15 16:57:55,610 - INFO - Downloaded audio from: Qatar rolls out the red carpet for Trump's arrival—literally #news #trump #politics #shorts #world
+2025-05-15 16:57:58,090 - INFO - Successfully uploaded news_audio_47ca782065754cd6a2da61c48849789f.mp3 to S3 bucket ytbucket-007
+2025-05-15 16:57:59,408 - INFO - Waiting for transcription to complete...
+2025-05-15 16:58:31,261 - INFO - Transcription completed successfully
+2025-05-15 16:58:31,265 - WARNING - Failed to transcribe audio. Skipping video
+2025-05-15 16:58:31,265 - INFO - Processing video: Trump wowed by Qatar&#39;s Royal Palace #foxnews #news #us #fox #trump #qatar #shorts #politics #world
+2025-05-15 16:58:32,425 - INFO - Successfully retrieved transcript for video N3kGW0UEZbw
+2025-05-15 16:58:35,529 - INFO - Summary:
+- A construction professional praised the high quality of the marble used in a construction project, calling it "perfecto".
+- The speaker expressed admiration for the beauty of the location.
+- The speaker positively acknowledged a camel greeting, noting it was a memorable experience.
+- Overall, the statement conveys strong approval and appreciation for the project and its surroundings.
+
+2025-05-15 16:58:35,536 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-05-15 16:58:57,320 - ERROR - Error updating Google Sheet: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+2025-05-15 16:58:57,320 - WARNING - Failed to update Google Sheet
+2025-05-15 16:58:59,334 - INFO - Processing video: Noem scolds Dems&#39; &#39;political stunt&#39; against ICE agents #shorts #news #immigration #congress #us #ice
+2025-05-15 16:59:00,462 - ERROR - Error retrieving transcript for video nzF8w1F4vbs: no element found: line 1, column 0
+2025-05-15 16:59:00,463 - INFO - No YouTube transcript available. Falling back to AWS transcription...
+2025-05-15 17:00:25,737 - INFO - downloading (527820 total bytes) file to buffer
+2025-05-15 17:00:26,341 - INFO - Downloaded audio from: Noem scolds Dems' 'political stunt' against ICE agents #shorts #news #immigration #congress #us #ice
+2025-05-15 17:00:28,842 - INFO - Successfully uploaded news_audio_af91ba20ebcb4e03b0700e1a14645a25.mp3 to S3 bucket ytbucket-007
+2025-05-15 17:00:30,188 - INFO - Waiting for transcription to complete...
+2025-05-15 17:01:02,093 - INFO - Transcription completed successfully
+2025-05-15 17:01:12,907 - INFO - Summary:
+- A congressional department is accused of illegal and harmful actions jeopardizing safety.
+- A May 9th incident is described as a politically motivated stunt endangering law enforcement and detainees.
+- The department's actions are deemed unacceptable and a violation of fundamental principles.
+- The criticism highlights hypocrisy, accusing Democrats of failing to uphold their stated commitment to law and order.
+
+2025-05-15 17:01:12,910 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-05-15 17:01:15,007 - INFO - Updated Google Sheet: 6 cells updated
+2025-05-15 17:01:15,008 - INFO - Successfully updated Google Sheet
+2025-05-15 17:01:17,015 - INFO - Processing video: Hakeem Jeffries sends warning to ICE over Newark protest #foxnews #news #us #trump #ice #shorts
+2025-05-15 17:01:18,232 - INFO - Successfully retrieved transcript for video hpZEdtUT-5Y
+2025-05-15 17:01:19,305 - INFO - Summary:
+- The speaker expresses concern about potential arrests or sanctions of House members.
+-  There's uncertainty about the appropriate response to such actions.
+- A "red line" is mentioned, indicating a limit beyond which action will be taken, though the specifics of this line remain unclear.
+- The speaker seems apprehensive about the potential consequences of crossing this unspecified "red line".
+
+2025-05-15 17:01:19,307 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-05-15 17:01:21,149 - INFO - Updated Google Sheet: 6 cells updated
+2025-05-15 17:01:21,149 - INFO - Successfully updated Google Sheet
+2025-05-15 17:01:24,315 - INFO - Deleted 6 files from S3
+2025-05-15 17:01:24,316 - INFO - Completed processing run at 2025-05-15 17:01:24
+2025-05-15 17:01:24,316 - INFO - Successfully processed 2 out of 5 videos
+2025-05-15 17:01:24,316 - INFO - Processing took 308.793933 seconds
+2025-05-15 18:02:12,699 - INFO - Starting news processing at 2025-05-15 18:02:12
+2025-05-15 18:02:12,702 - WARNING - Error searching channel UCupvZG-5ko_eiXAupbDfxWw: EOF occurred in violation of protocol (_ssl.c:2426)
+2025-05-15 18:02:14,130 - INFO - Found 5 videos from channel UCBi2mrWuNuyYy4gbM6fU18Q
+2025-05-15 18:02:15,412 - INFO - Found 0 videos from channel UCeY0bbntWzzVIaj2z3QigXg
+2025-05-15 18:02:17,953 - INFO - Found 5 videos from channel UC16niRr50-MSBwiO3YDb3RA
+2025-05-15 18:02:19,471 - INFO - Found 0 videos from channel UCNye-wNBqNL5ZzHSJj3l8Bg
+2025-05-15 18:02:21,308 - INFO - Found 2 videos from channel UCIRYBXDze5krPDzAEOxFGVA
+2025-05-15 18:02:23,388 - INFO - Found 3 videos from channel UCJg9wBPyKMNA5sRDnvzmkdg
+2025-05-15 18:02:24,880 - INFO - Found 0 videos from channel UCUMZ7gohGI9HcU9VNsr2FJQ
+2025-05-15 18:02:27,097 - INFO - Found 5 videos from channel UChqUTb7kYRX8-EiaN3XFrSQ
+2025-05-15 18:02:29,349 - INFO - Found 5 videos from channel UCXIJgqnII2ZOINSWNOGFThA
+2025-05-15 18:02:30,357 - INFO - Processing video: Qatar rolls out the red carpet for Trump&#39;s arrival—literally #news #trump #politics #shorts #world
+2025-05-15 18:02:52,679 - INFO - No YouTube transcript available. Falling back to AWS transcription...
+2025-05-15 18:02:54,501 - INFO - downloading (582727 total bytes) file to buffer
+2025-05-15 18:02:55,793 - INFO - Downloaded audio from: Qatar rolls out the red carpet for Trump's arrival—literally #news #trump #politics #shorts #world
+2025-05-15 18:02:59,102 - INFO - Successfully uploaded news_audio_a14c00979e2f4ce4886937b3d2a6c188.mp3 to S3 bucket ytbucket-007
+2025-05-15 18:03:00,533 - INFO - Waiting for transcription to complete...
+2025-05-15 18:03:33,365 - INFO - Transcription completed successfully
+2025-05-15 18:03:33,370 - WARNING - Failed to transcribe audio. Skipping video
+2025-05-15 18:03:33,370 - INFO - Processing video: Trump wowed by Qatar&#39;s Royal Palace #foxnews #news #us #fox #trump #qatar #shorts #politics #world
+2025-05-15 18:03:34,657 - INFO - Successfully retrieved transcript for video N3kGW0UEZbw
+2025-05-15 18:03:37,526 - INFO - Summary:
+- A construction professional praised the high quality ("perfecto") of the marble work at a location.
+- The speaker expressed admiration for the beauty of the place.
+-  Camels were present and favorably mentioned.
+- The speaker expressed gratitude for a welcoming reception.
+
+2025-05-15 18:03:37,563 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-05-15 18:04:00,486 - ERROR - Error updating Google Sheet: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+2025-05-15 18:04:00,487 - WARNING - Failed to update Google Sheet
+2025-05-15 18:04:02,501 - INFO - Processing video: Noem scolds Dems&#39; &#39;political stunt&#39; against ICE agents #shorts #news #immigration #congress #us #ice
+2025-05-15 18:04:03,891 - INFO - Successfully retrieved transcript for video nzF8w1F4vbs
+2025-05-15 18:04:04,919 - INFO - Summary:
+- A congressional department is accused of illegal activity endangering law enforcement, staff, and detainees.
+- A May 9th incident is described as a politically motivated stunt rather than an oversight.
+- The department's actions are criticized as violating the principle of law and order.
+-  The criticism alleges the department's behavior is unacceptable and is jeopardizing national safety.
+
+2025-05-15 18:04:04,923 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-05-15 18:04:27,006 - ERROR - Error updating Google Sheet: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+2025-05-15 18:04:27,006 - WARNING - Failed to update Google Sheet
+2025-05-15 18:04:29,013 - INFO - Processing video: House Democrat forces impeachment vote against President Donald Trump
+2025-05-15 18:04:30,316 - INFO - Successfully retrieved transcript for video TJGUyp70C-I
+2025-05-15 18:04:31,377 - INFO - Summary:
+- A House Democrat, Representative Sheree Tenlander, introduced an impeachment resolution against President Trump.
+- The resolution lacks support from Democratic leadership and is expected to be tabled tonight.  
+-  Democratic leadership, including House Leader Hakeem Jeffries, will likely vote with Republicans to table the resolution.
+- Representative Tenlander plans to repeatedly introduce similar resolutions.
+
+2025-05-15 18:04:31,380 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-05-15 18:04:52,911 - ERROR - Error updating Google Sheet: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+2025-05-15 18:04:52,914 - WARNING - Failed to update Google Sheet
+2025-05-15 18:04:54,919 - INFO - Processing video: Trump reveals his thoughts on Pope Leo XIV #shorts #news #pope #trump #world #us #religion #catholic
+2025-05-15 18:04:55,963 - INFO - Successfully retrieved transcript for video ZDicUE0Hnxc
+2025-05-15 18:04:57,057 - INFO - Summary:
+- The speaker mentions the election of the first American Pope, expressing surprise at the choice.
+- The speaker notes contrasting views with the Pope on immigration but expresses willingness to discuss the issue.
+- The speaker criticizes CNN and ABC News coverage of the papal election, specifically mentioning Dana Bash and George Stephanopoulos.
+-  The speaker mentions a $16 million payment made to George Stephanopoulos, framing it positively.
+
+2025-05-15 18:04:57,063 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-05-15 18:05:18,554 - ERROR - Error updating Google Sheet: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+2025-05-15 18:05:18,555 - WARNING - Failed to update Google Sheet
+2025-05-15 18:05:21,626 - INFO - Deleted 2 files from S3
+2025-05-15 18:05:21,628 - INFO - Completed processing run at 2025-05-15 18:05:21
+2025-05-15 18:05:21,628 - INFO - Successfully processed 0 out of 5 videos
+2025-05-15 18:05:21,628 - INFO - Processing took 188.929253 seconds
+2025-05-15 18:08:20,363 - INFO - Script terminated by user
+2025-05-15 18:08:26,160 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-05-15 18:08:26,165 - INFO - Scheduler initialized at 2025-05-15 18:08:26
+2025-05-15 18:08:26,165 - INFO - News processing will run every hour
+2025-05-15 18:08:26,166 - INFO - Starting news processing at 2025-05-15 18:08:26
+2025-05-15 18:08:26,844 - WARNING - Encountered 403 Forbidden with reason "quotaExceeded"
+2025-05-15 18:08:26,844 - WARNING - Error searching channel UCupvZG-5ko_eiXAupbDfxWw: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?channelId=UCupvZG-5ko_eiXAupbDfxWw&part=id%2Csnippet&maxResults=5&type=video&videoDuration=short&q=world+news&relevanceLanguage=en&publishedAfter=2025-05-14T12%3A38%3A26.166232Z&order=viewCount&key=AIzaSyC_FAZ-RvStWM0OpjPY56kYZ018_hZsZhg&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+2025-05-15 18:08:26,971 - WARNING - Encountered 403 Forbidden with reason "quotaExceeded"
+2025-05-15 18:08:26,971 - WARNING - Error searching channel UCBi2mrWuNuyYy4gbM6fU18Q: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?channelId=UCBi2mrWuNuyYy4gbM6fU18Q&part=id%2Csnippet&maxResults=5&type=video&videoDuration=short&q=world+news&relevanceLanguage=en&publishedAfter=2025-05-14T12%3A38%3A26.166232Z&order=viewCount&key=AIzaSyC_FAZ-RvStWM0OpjPY56kYZ018_hZsZhg&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+2025-05-15 18:08:27,088 - WARNING - Encountered 403 Forbidden with reason "quotaExceeded"
+2025-05-15 18:08:27,089 - WARNING - Error searching channel UCeY0bbntWzzVIaj2z3QigXg: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?channelId=UCeY0bbntWzzVIaj2z3QigXg&part=id%2Csnippet&maxResults=5&type=video&videoDuration=short&q=world+news&relevanceLanguage=en&publishedAfter=2025-05-14T12%3A38%3A26.166232Z&order=viewCount&key=AIzaSyC_FAZ-RvStWM0OpjPY56kYZ018_hZsZhg&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+2025-05-15 18:08:27,417 - WARNING - Encountered 403 Forbidden with reason "quotaExceeded"
+2025-05-15 18:08:27,418 - WARNING - Error searching channel UC16niRr50-MSBwiO3YDb3RA: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?channelId=UC16niRr50-MSBwiO3YDb3RA&part=id%2Csnippet&maxResults=5&type=video&videoDuration=short&q=world+news&relevanceLanguage=en&publishedAfter=2025-05-14T12%3A38%3A26.166232Z&order=viewCount&key=AIzaSyC_FAZ-RvStWM0OpjPY56kYZ018_hZsZhg&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+2025-05-15 18:08:27,561 - WARNING - Encountered 403 Forbidden with reason "quotaExceeded"
+2025-05-15 18:08:27,563 - WARNING - Error searching channel UCNye-wNBqNL5ZzHSJj3l8Bg: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?channelId=UCNye-wNBqNL5ZzHSJj3l8Bg&part=id%2Csnippet&maxResults=5&type=video&videoDuration=short&q=world+news&relevanceLanguage=en&publishedAfter=2025-05-14T12%3A38%3A26.166232Z&order=viewCount&key=AIzaSyC_FAZ-RvStWM0OpjPY56kYZ018_hZsZhg&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+2025-05-15 18:08:27,674 - WARNING - Encountered 403 Forbidden with reason "quotaExceeded"
+2025-05-15 18:08:27,674 - WARNING - Error searching channel UCIRYBXDze5krPDzAEOxFGVA: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?channelId=UCIRYBXDze5krPDzAEOxFGVA&part=id%2Csnippet&maxResults=5&type=video&videoDuration=short&q=world+news&relevanceLanguage=en&publishedAfter=2025-05-14T12%3A38%3A26.166232Z&order=viewCount&key=AIzaSyC_FAZ-RvStWM0OpjPY56kYZ018_hZsZhg&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+2025-05-15 18:08:27,780 - WARNING - Encountered 403 Forbidden with reason "quotaExceeded"
+2025-05-15 18:08:27,780 - WARNING - Error searching channel UCJg9wBPyKMNA5sRDnvzmkdg: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?channelId=UCJg9wBPyKMNA5sRDnvzmkdg&part=id%2Csnippet&maxResults=5&type=video&videoDuration=short&q=world+news&relevanceLanguage=en&publishedAfter=2025-05-14T12%3A38%3A26.166232Z&order=viewCount&key=AIzaSyC_FAZ-RvStWM0OpjPY56kYZ018_hZsZhg&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+2025-05-15 18:08:27,884 - WARNING - Encountered 403 Forbidden with reason "quotaExceeded"
+2025-05-15 18:08:27,886 - WARNING - Error searching channel UCUMZ7gohGI9HcU9VNsr2FJQ: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?channelId=UCUMZ7gohGI9HcU9VNsr2FJQ&part=id%2Csnippet&maxResults=5&type=video&videoDuration=short&q=world+news&relevanceLanguage=en&publishedAfter=2025-05-14T12%3A38%3A26.166232Z&order=viewCount&key=AIzaSyC_FAZ-RvStWM0OpjPY56kYZ018_hZsZhg&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+2025-05-15 18:08:27,994 - WARNING - Encountered 403 Forbidden with reason "quotaExceeded"
+2025-05-15 18:08:27,994 - WARNING - Error searching channel UChqUTb7kYRX8-EiaN3XFrSQ: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?channelId=UChqUTb7kYRX8-EiaN3XFrSQ&part=id%2Csnippet&maxResults=5&type=video&videoDuration=short&q=world+news&relevanceLanguage=en&publishedAfter=2025-05-14T12%3A38%3A26.166232Z&order=viewCount&key=AIzaSyC_FAZ-RvStWM0OpjPY56kYZ018_hZsZhg&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+2025-05-15 18:08:28,140 - WARNING - Encountered 403 Forbidden with reason "quotaExceeded"
+2025-05-15 18:08:28,140 - WARNING - Error searching channel UCXIJgqnII2ZOINSWNOGFThA: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?channelId=UCXIJgqnII2ZOINSWNOGFThA&part=id%2Csnippet&maxResults=5&type=video&videoDuration=short&q=world+news&relevanceLanguage=en&publishedAfter=2025-05-14T12%3A38%3A26.166232Z&order=viewCount&key=AIzaSyC_FAZ-RvStWM0OpjPY56kYZ018_hZsZhg&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+2025-05-15 18:08:28,141 - WARNING - No suitable videos found
+2025-05-15 18:08:42,497 - INFO - Script terminated by user
+2025-05-15 18:08:45,225 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-05-15 18:08:45,228 - INFO - Scheduler initialized at 2025-05-15 18:08:45
+2025-05-15 18:08:45,228 - INFO - News processing will run every hour
+2025-05-15 18:08:45,228 - INFO - Starting news processing at 2025-05-15 18:08:45
+2025-05-15 18:08:45,607 - WARNING - Encountered 403 Forbidden with reason "quotaExceeded"
+2025-05-15 18:08:45,609 - WARNING - Error searching channel UCupvZG-5ko_eiXAupbDfxWw: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?channelId=UCupvZG-5ko_eiXAupbDfxWw&part=id%2Csnippet&maxResults=5&type=video&videoDuration=short&q=world+news&relevanceLanguage=en&publishedAfter=2025-05-14T12%3A38%3A45.229261Z&order=viewCount&key=AIzaSyC_FAZ-RvStWM0OpjPY56kYZ018_hZsZhg&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+2025-05-15 18:08:45,718 - WARNING - Encountered 403 Forbidden with reason "quotaExceeded"
+2025-05-15 18:08:45,719 - WARNING - Error searching channel UCBi2mrWuNuyYy4gbM6fU18Q: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?channelId=UCBi2mrWuNuyYy4gbM6fU18Q&part=id%2Csnippet&maxResults=5&type=video&videoDuration=short&q=world+news&relevanceLanguage=en&publishedAfter=2025-05-14T12%3A38%3A45.229261Z&order=viewCount&key=AIzaSyC_FAZ-RvStWM0OpjPY56kYZ018_hZsZhg&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+2025-05-15 18:08:45,843 - WARNING - Encountered 403 Forbidden with reason "quotaExceeded"
+2025-05-15 18:08:45,844 - WARNING - Error searching channel UCeY0bbntWzzVIaj2z3QigXg: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?channelId=UCeY0bbntWzzVIaj2z3QigXg&part=id%2Csnippet&maxResults=5&type=video&videoDuration=short&q=world+news&relevanceLanguage=en&publishedAfter=2025-05-14T12%3A38%3A45.229261Z&order=viewCount&key=AIzaSyC_FAZ-RvStWM0OpjPY56kYZ018_hZsZhg&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+2025-05-15 18:08:45,957 - WARNING - Encountered 403 Forbidden with reason "quotaExceeded"
+2025-05-15 18:08:45,958 - WARNING - Error searching channel UC16niRr50-MSBwiO3YDb3RA: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?channelId=UC16niRr50-MSBwiO3YDb3RA&part=id%2Csnippet&maxResults=5&type=video&videoDuration=short&q=world+news&relevanceLanguage=en&publishedAfter=2025-05-14T12%3A38%3A45.229261Z&order=viewCount&key=AIzaSyC_FAZ-RvStWM0OpjPY56kYZ018_hZsZhg&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+2025-05-15 18:08:46,062 - WARNING - Encountered 403 Forbidden with reason "quotaExceeded"
+2025-05-15 18:08:46,063 - WARNING - Error searching channel UCNye-wNBqNL5ZzHSJj3l8Bg: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?channelId=UCNye-wNBqNL5ZzHSJj3l8Bg&part=id%2Csnippet&maxResults=5&type=video&videoDuration=short&q=world+news&relevanceLanguage=en&publishedAfter=2025-05-14T12%3A38%3A45.229261Z&order=viewCount&key=AIzaSyC_FAZ-RvStWM0OpjPY56kYZ018_hZsZhg&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+2025-05-15 18:08:46,170 - WARNING - Encountered 403 Forbidden with reason "quotaExceeded"
+2025-05-15 18:08:46,171 - WARNING - Error searching channel UCIRYBXDze5krPDzAEOxFGVA: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?channelId=UCIRYBXDze5krPDzAEOxFGVA&part=id%2Csnippet&maxResults=5&type=video&videoDuration=short&q=world+news&relevanceLanguage=en&publishedAfter=2025-05-14T12%3A38%3A45.229261Z&order=viewCount&key=AIzaSyC_FAZ-RvStWM0OpjPY56kYZ018_hZsZhg&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+2025-05-15 18:08:46,674 - WARNING - Encountered 403 Forbidden with reason "quotaExceeded"
+2025-05-15 18:08:46,674 - WARNING - Error searching channel UCJg9wBPyKMNA5sRDnvzmkdg: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/videos?part=contentDetails%2Cstatistics&id=puNa9bNOqNg&key=AIzaSyC_FAZ-RvStWM0OpjPY56kYZ018_hZsZhg&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+2025-05-15 18:08:46,775 - WARNING - Encountered 403 Forbidden with reason "quotaExceeded"
+2025-05-15 18:08:46,775 - WARNING - Error searching channel UCUMZ7gohGI9HcU9VNsr2FJQ: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?channelId=UCUMZ7gohGI9HcU9VNsr2FJQ&part=id%2Csnippet&maxResults=5&type=video&videoDuration=short&q=world+news&relevanceLanguage=en&publishedAfter=2025-05-14T12%3A38%3A45.229261Z&order=viewCount&key=AIzaSyC_FAZ-RvStWM0OpjPY56kYZ018_hZsZhg&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+2025-05-15 18:08:46,877 - WARNING - Encountered 403 Forbidden with reason "quotaExceeded"
+2025-05-15 18:08:46,891 - WARNING - Error searching channel UChqUTb7kYRX8-EiaN3XFrSQ: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?channelId=UChqUTb7kYRX8-EiaN3XFrSQ&part=id%2Csnippet&maxResults=5&type=video&videoDuration=short&q=world+news&relevanceLanguage=en&publishedAfter=2025-05-14T12%3A38%3A45.229261Z&order=viewCount&key=AIzaSyC_FAZ-RvStWM0OpjPY56kYZ018_hZsZhg&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+2025-05-15 18:08:47,744 - INFO - Found 5 videos from channel UCXIJgqnII2ZOINSWNOGFThA
+2025-05-15 18:08:48,758 - INFO - Processing video: Qatar rolls out the red carpet for Trump&#39;s arrival—literally #news #trump #politics #shorts #world
+2025-05-15 18:08:49,625 - INFO - No YouTube transcript available. Falling back to AWS transcription...
+2025-05-15 18:08:50,473 - INFO - downloading (582727 total bytes) file to buffer
+2025-05-15 18:08:51,131 - INFO - Downloaded audio from: Qatar rolls out the red carpet for Trump's arrival—literally #news #trump #politics #shorts #world
+2025-05-15 18:08:53,199 - INFO - Script terminated by user
+2025-05-15 21:51:36,268 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-05-15 21:51:36,273 - INFO - Scheduler initialized at 2025-05-15 21:51:36
+2025-05-15 21:51:36,273 - INFO - News processing will run every hour
+2025-05-15 21:51:36,274 - INFO - Starting news processing at 2025-05-15 21:51:36
+2025-05-15 21:52:36,558 - WARNING - Error searching channel UCupvZG-5ko_eiXAupbDfxWw: timed out
+2025-05-15 21:52:37,768 - WARNING - Encountered 403 Forbidden with reason "quotaExceeded"
+2025-05-15 21:52:37,769 - WARNING - Error searching channel UCBi2mrWuNuyYy4gbM6fU18Q: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?channelId=UCBi2mrWuNuyYy4gbM6fU18Q&part=id%2Csnippet&maxResults=5&type=video&videoDuration=short&q=world+news&relevanceLanguage=en&publishedAfter=2025-05-14T16%3A21%3A36.274599Z&order=viewCount&key=AIzaSyC_FAZ-RvStWM0OpjPY56kYZ018_hZsZhg&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+2025-05-15 21:52:37,929 - WARNING - Encountered 403 Forbidden with reason "quotaExceeded"
+2025-05-15 21:52:37,935 - WARNING - Error searching channel UCeY0bbntWzzVIaj2z3QigXg: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?channelId=UCeY0bbntWzzVIaj2z3QigXg&part=id%2Csnippet&maxResults=5&type=video&videoDuration=short&q=world+news&relevanceLanguage=en&publishedAfter=2025-05-14T16%3A21%3A36.274599Z&order=viewCount&key=AIzaSyC_FAZ-RvStWM0OpjPY56kYZ018_hZsZhg&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+2025-05-15 21:52:38,302 - WARNING - Encountered 403 Forbidden with reason "quotaExceeded"
+2025-05-15 21:52:38,303 - WARNING - Error searching channel UC16niRr50-MSBwiO3YDb3RA: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?channelId=UC16niRr50-MSBwiO3YDb3RA&part=id%2Csnippet&maxResults=5&type=video&videoDuration=short&q=world+news&relevanceLanguage=en&publishedAfter=2025-05-14T16%3A21%3A36.274599Z&order=viewCount&key=AIzaSyC_FAZ-RvStWM0OpjPY56kYZ018_hZsZhg&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+2025-05-15 21:52:38,441 - WARNING - Encountered 403 Forbidden with reason "quotaExceeded"
+2025-05-15 21:52:38,442 - WARNING - Error searching channel UCNye-wNBqNL5ZzHSJj3l8Bg: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?channelId=UCNye-wNBqNL5ZzHSJj3l8Bg&part=id%2Csnippet&maxResults=5&type=video&videoDuration=short&q=world+news&relevanceLanguage=en&publishedAfter=2025-05-14T16%3A21%3A36.274599Z&order=viewCount&key=AIzaSyC_FAZ-RvStWM0OpjPY56kYZ018_hZsZhg&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+2025-05-15 21:52:38,576 - WARNING - Encountered 403 Forbidden with reason "quotaExceeded"
+2025-05-15 21:52:38,577 - WARNING - Error searching channel UCIRYBXDze5krPDzAEOxFGVA: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?channelId=UCIRYBXDze5krPDzAEOxFGVA&part=id%2Csnippet&maxResults=5&type=video&videoDuration=short&q=world+news&relevanceLanguage=en&publishedAfter=2025-05-14T16%3A21%3A36.274599Z&order=viewCount&key=AIzaSyC_FAZ-RvStWM0OpjPY56kYZ018_hZsZhg&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+2025-05-15 21:52:38,707 - WARNING - Encountered 403 Forbidden with reason "quotaExceeded"
+2025-05-15 21:52:38,708 - WARNING - Error searching channel UCJg9wBPyKMNA5sRDnvzmkdg: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?channelId=UCJg9wBPyKMNA5sRDnvzmkdg&part=id%2Csnippet&maxResults=5&type=video&videoDuration=short&q=world+news&relevanceLanguage=en&publishedAfter=2025-05-14T16%3A21%3A36.274599Z&order=viewCount&key=AIzaSyC_FAZ-RvStWM0OpjPY56kYZ018_hZsZhg&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+2025-05-15 21:52:38,841 - WARNING - Encountered 403 Forbidden with reason "quotaExceeded"
+2025-05-15 21:52:38,843 - WARNING - Error searching channel UCUMZ7gohGI9HcU9VNsr2FJQ: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?channelId=UCUMZ7gohGI9HcU9VNsr2FJQ&part=id%2Csnippet&maxResults=5&type=video&videoDuration=short&q=world+news&relevanceLanguage=en&publishedAfter=2025-05-14T16%3A21%3A36.274599Z&order=viewCount&key=AIzaSyC_FAZ-RvStWM0OpjPY56kYZ018_hZsZhg&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+2025-05-15 21:52:38,974 - WARNING - Encountered 403 Forbidden with reason "quotaExceeded"
+2025-05-15 21:52:38,975 - WARNING - Error searching channel UChqUTb7kYRX8-EiaN3XFrSQ: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?channelId=UChqUTb7kYRX8-EiaN3XFrSQ&part=id%2Csnippet&maxResults=5&type=video&videoDuration=short&q=world+news&relevanceLanguage=en&publishedAfter=2025-05-14T16%3A21%3A36.274599Z&order=viewCount&key=AIzaSyC_FAZ-RvStWM0OpjPY56kYZ018_hZsZhg&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+2025-05-15 21:52:39,133 - WARNING - Encountered 403 Forbidden with reason "quotaExceeded"
+2025-05-15 21:52:39,134 - WARNING - Error searching channel UCXIJgqnII2ZOINSWNOGFThA: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?channelId=UCXIJgqnII2ZOINSWNOGFThA&part=id%2Csnippet&maxResults=5&type=video&videoDuration=short&q=world+news&relevanceLanguage=en&publishedAfter=2025-05-14T16%3A21%3A36.274599Z&order=viewCount&key=AIzaSyC_FAZ-RvStWM0OpjPY56kYZ018_hZsZhg&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+2025-05-15 21:52:39,135 - WARNING - No suitable videos found
+2025-05-15 21:59:00,391 - INFO - Script terminated by user
+2025-05-15 22:49:23,408 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-05-15 22:49:23,410 - INFO - Scheduler initialized at 2025-05-15 22:49:23
+2025-05-15 22:49:23,411 - INFO - News processing will run every hour
+2025-05-15 22:49:23,411 - INFO - Starting news processing at 2025-05-15 22:49:23
+2025-05-15 22:49:24,042 - WARNING - Encountered 403 Forbidden with reason "quotaExceeded"
+2025-05-15 22:49:24,043 - WARNING - Error searching channel UCupvZG-5ko_eiXAupbDfxWw: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?channelId=UCupvZG-5ko_eiXAupbDfxWw&part=id%2Csnippet&maxResults=5&type=video&videoDuration=short&q=world+news&relevanceLanguage=en&publishedAfter=2025-05-14T17%3A19%3A23.411172Z&order=viewCount&key=AIzaSyC_FAZ-RvStWM0OpjPY56kYZ018_hZsZhg&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+2025-05-15 22:49:24,166 - WARNING - Encountered 403 Forbidden with reason "quotaExceeded"
+2025-05-15 22:49:24,166 - WARNING - Error searching channel UCBi2mrWuNuyYy4gbM6fU18Q: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?channelId=UCBi2mrWuNuyYy4gbM6fU18Q&part=id%2Csnippet&maxResults=5&type=video&videoDuration=short&q=world+news&relevanceLanguage=en&publishedAfter=2025-05-14T17%3A19%3A23.411172Z&order=viewCount&key=AIzaSyC_FAZ-RvStWM0OpjPY56kYZ018_hZsZhg&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+2025-05-15 22:49:24,287 - WARNING - Encountered 403 Forbidden with reason "quotaExceeded"
+2025-05-15 22:49:24,289 - WARNING - Error searching channel UCeY0bbntWzzVIaj2z3QigXg: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?channelId=UCeY0bbntWzzVIaj2z3QigXg&part=id%2Csnippet&maxResults=5&type=video&videoDuration=short&q=world+news&relevanceLanguage=en&publishedAfter=2025-05-14T17%3A19%3A23.411172Z&order=viewCount&key=AIzaSyC_FAZ-RvStWM0OpjPY56kYZ018_hZsZhg&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+2025-05-15 22:49:24,405 - WARNING - Encountered 403 Forbidden with reason "quotaExceeded"
+2025-05-15 22:49:24,405 - WARNING - Error searching channel UC16niRr50-MSBwiO3YDb3RA: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?channelId=UC16niRr50-MSBwiO3YDb3RA&part=id%2Csnippet&maxResults=5&type=video&videoDuration=short&q=world+news&relevanceLanguage=en&publishedAfter=2025-05-14T17%3A19%3A23.411172Z&order=viewCount&key=AIzaSyC_FAZ-RvStWM0OpjPY56kYZ018_hZsZhg&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+2025-05-15 22:49:24,522 - WARNING - Encountered 403 Forbidden with reason "quotaExceeded"
+2025-05-15 22:49:24,523 - WARNING - Error searching channel UCNye-wNBqNL5ZzHSJj3l8Bg: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?channelId=UCNye-wNBqNL5ZzHSJj3l8Bg&part=id%2Csnippet&maxResults=5&type=video&videoDuration=short&q=world+news&relevanceLanguage=en&publishedAfter=2025-05-14T17%3A19%3A23.411172Z&order=viewCount&key=AIzaSyC_FAZ-RvStWM0OpjPY56kYZ018_hZsZhg&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+2025-05-15 22:49:24,631 - WARNING - Encountered 403 Forbidden with reason "quotaExceeded"
+2025-05-15 22:49:24,632 - WARNING - Error searching channel UCIRYBXDze5krPDzAEOxFGVA: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?channelId=UCIRYBXDze5krPDzAEOxFGVA&part=id%2Csnippet&maxResults=5&type=video&videoDuration=short&q=world+news&relevanceLanguage=en&publishedAfter=2025-05-14T17%3A19%3A23.411172Z&order=viewCount&key=AIzaSyC_FAZ-RvStWM0OpjPY56kYZ018_hZsZhg&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+2025-05-15 22:49:24,953 - WARNING - Encountered 403 Forbidden with reason "quotaExceeded"
+2025-05-15 22:49:24,954 - WARNING - Error searching channel UCJg9wBPyKMNA5sRDnvzmkdg: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?channelId=UCJg9wBPyKMNA5sRDnvzmkdg&part=id%2Csnippet&maxResults=5&type=video&videoDuration=short&q=world+news&relevanceLanguage=en&publishedAfter=2025-05-14T17%3A19%3A23.411172Z&order=viewCount&key=AIzaSyC_FAZ-RvStWM0OpjPY56kYZ018_hZsZhg&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+2025-05-15 22:49:25,070 - WARNING - Encountered 403 Forbidden with reason "quotaExceeded"
+2025-05-15 22:49:25,071 - WARNING - Error searching channel UCUMZ7gohGI9HcU9VNsr2FJQ: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?channelId=UCUMZ7gohGI9HcU9VNsr2FJQ&part=id%2Csnippet&maxResults=5&type=video&videoDuration=short&q=world+news&relevanceLanguage=en&publishedAfter=2025-05-14T17%3A19%3A23.411172Z&order=viewCount&key=AIzaSyC_FAZ-RvStWM0OpjPY56kYZ018_hZsZhg&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+2025-05-15 22:49:25,186 - WARNING - Encountered 403 Forbidden with reason "quotaExceeded"
+2025-05-15 22:49:25,192 - WARNING - Error searching channel UChqUTb7kYRX8-EiaN3XFrSQ: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?channelId=UChqUTb7kYRX8-EiaN3XFrSQ&part=id%2Csnippet&maxResults=5&type=video&videoDuration=short&q=world+news&relevanceLanguage=en&publishedAfter=2025-05-14T17%3A19%3A23.411172Z&order=viewCount&key=AIzaSyC_FAZ-RvStWM0OpjPY56kYZ018_hZsZhg&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+2025-05-15 22:49:25,309 - WARNING - Encountered 403 Forbidden with reason "quotaExceeded"
+2025-05-15 22:49:25,310 - WARNING - Error searching channel UCXIJgqnII2ZOINSWNOGFThA: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?channelId=UCXIJgqnII2ZOINSWNOGFThA&part=id%2Csnippet&maxResults=5&type=video&videoDuration=short&q=world+news&relevanceLanguage=en&publishedAfter=2025-05-14T17%3A19%3A23.411172Z&order=viewCount&key=AIzaSyC_FAZ-RvStWM0OpjPY56kYZ018_hZsZhg&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+2025-05-15 22:49:25,311 - WARNING - No suitable videos found
+2025-05-15 22:50:36,605 - INFO - Script terminated by user
+2025-05-16 00:32:04,373 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-05-16 00:32:04,377 - INFO - Scheduler initialized at 2025-05-16 00:32:04
+2025-05-16 00:32:04,377 - INFO - News processing will run every hour
+2025-05-16 00:32:04,377 - INFO - Starting news processing at 2025-05-16 00:32:04
+2025-05-16 00:32:05,073 - WARNING - Encountered 403 Forbidden with reason "quotaExceeded"
+2025-05-16 00:32:05,073 - WARNING - Error searching channel UCupvZG-5ko_eiXAupbDfxWw: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?channelId=UCupvZG-5ko_eiXAupbDfxWw&part=id%2Csnippet&maxResults=5&type=video&videoDuration=short&q=world+news&relevanceLanguage=en&publishedAfter=2025-05-14T19%3A02%3A04.377983Z&order=viewCount&key=AIzaSyC_FAZ-RvStWM0OpjPY56kYZ018_hZsZhg&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+2025-05-16 00:32:05,411 - WARNING - Encountered 403 Forbidden with reason "quotaExceeded"
+2025-05-16 00:32:05,411 - WARNING - Error searching channel UCBi2mrWuNuyYy4gbM6fU18Q: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?channelId=UCBi2mrWuNuyYy4gbM6fU18Q&part=id%2Csnippet&maxResults=5&type=video&videoDuration=short&q=world+news&relevanceLanguage=en&publishedAfter=2025-05-14T19%3A02%3A04.377983Z&order=viewCount&key=AIzaSyC_FAZ-RvStWM0OpjPY56kYZ018_hZsZhg&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+2025-05-16 00:32:05,545 - WARNING - Encountered 403 Forbidden with reason "quotaExceeded"
+2025-05-16 00:32:05,545 - WARNING - Error searching channel UCeY0bbntWzzVIaj2z3QigXg: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?channelId=UCeY0bbntWzzVIaj2z3QigXg&part=id%2Csnippet&maxResults=5&type=video&videoDuration=short&q=world+news&relevanceLanguage=en&publishedAfter=2025-05-14T19%3A02%3A04.377983Z&order=viewCount&key=AIzaSyC_FAZ-RvStWM0OpjPY56kYZ018_hZsZhg&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+2025-05-16 00:32:05,678 - WARNING - Encountered 403 Forbidden with reason "quotaExceeded"
+2025-05-16 00:32:05,678 - WARNING - Error searching channel UC16niRr50-MSBwiO3YDb3RA: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?channelId=UC16niRr50-MSBwiO3YDb3RA&part=id%2Csnippet&maxResults=5&type=video&videoDuration=short&q=world+news&relevanceLanguage=en&publishedAfter=2025-05-14T19%3A02%3A04.377983Z&order=viewCount&key=AIzaSyC_FAZ-RvStWM0OpjPY56kYZ018_hZsZhg&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+2025-05-16 00:32:05,804 - WARNING - Encountered 403 Forbidden with reason "quotaExceeded"
+2025-05-16 00:32:05,804 - WARNING - Error searching channel UCNye-wNBqNL5ZzHSJj3l8Bg: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?channelId=UCNye-wNBqNL5ZzHSJj3l8Bg&part=id%2Csnippet&maxResults=5&type=video&videoDuration=short&q=world+news&relevanceLanguage=en&publishedAfter=2025-05-14T19%3A02%3A04.377983Z&order=viewCount&key=AIzaSyC_FAZ-RvStWM0OpjPY56kYZ018_hZsZhg&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+2025-05-16 00:32:06,142 - WARNING - Encountered 403 Forbidden with reason "quotaExceeded"
+2025-05-16 00:32:06,142 - WARNING - Error searching channel UCIRYBXDze5krPDzAEOxFGVA: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?channelId=UCIRYBXDze5krPDzAEOxFGVA&part=id%2Csnippet&maxResults=5&type=video&videoDuration=short&q=world+news&relevanceLanguage=en&publishedAfter=2025-05-14T19%3A02%3A04.377983Z&order=viewCount&key=AIzaSyC_FAZ-RvStWM0OpjPY56kYZ018_hZsZhg&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+2025-05-16 00:32:06,474 - WARNING - Encountered 403 Forbidden with reason "quotaExceeded"
+2025-05-16 00:32:06,474 - WARNING - Error searching channel UCJg9wBPyKMNA5sRDnvzmkdg: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?channelId=UCJg9wBPyKMNA5sRDnvzmkdg&part=id%2Csnippet&maxResults=5&type=video&videoDuration=short&q=world+news&relevanceLanguage=en&publishedAfter=2025-05-14T19%3A02%3A04.377983Z&order=viewCount&key=AIzaSyC_FAZ-RvStWM0OpjPY56kYZ018_hZsZhg&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+2025-05-16 00:32:06,604 - WARNING - Encountered 403 Forbidden with reason "quotaExceeded"
+2025-05-16 00:32:06,604 - WARNING - Error searching channel UCUMZ7gohGI9HcU9VNsr2FJQ: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?channelId=UCUMZ7gohGI9HcU9VNsr2FJQ&part=id%2Csnippet&maxResults=5&type=video&videoDuration=short&q=world+news&relevanceLanguage=en&publishedAfter=2025-05-14T19%3A02%3A04.377983Z&order=viewCount&key=AIzaSyC_FAZ-RvStWM0OpjPY56kYZ018_hZsZhg&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+2025-05-16 00:32:06,736 - WARNING - Encountered 403 Forbidden with reason "quotaExceeded"
+2025-05-16 00:32:06,737 - WARNING - Error searching channel UChqUTb7kYRX8-EiaN3XFrSQ: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/search?channelId=UChqUTb7kYRX8-EiaN3XFrSQ&part=id%2Csnippet&maxResults=5&type=video&videoDuration=short&q=world+news&relevanceLanguage=en&publishedAfter=2025-05-14T19%3A02%3A04.377983Z&order=viewCount&key=AIzaSyC_FAZ-RvStWM0OpjPY56kYZ018_hZsZhg&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+2025-05-16 00:32:07,212 - WARNING - Encountered 403 Forbidden with reason "quotaExceeded"
+2025-05-16 00:32:07,212 - WARNING - Error searching channel UCXIJgqnII2ZOINSWNOGFThA: <HttpError 403 when requesting https://youtube.googleapis.com/youtube/v3/videos?part=contentDetails%2Cstatistics&id=nzF8w1F4vbs&key=AIzaSyC_FAZ-RvStWM0OpjPY56kYZ018_hZsZhg&alt=json returned "The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.". Details: "[{'message': 'The request cannot be completed because you have exceeded your <a href="/youtube/v3/getting-started#quota">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]">
+2025-05-16 00:32:07,213 - WARNING - No suitable videos found
+2025-05-16 00:32:31,579 - INFO - Script terminated by user
+2025-05-17 16:01:31,037 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-05-17 16:01:31,042 - INFO - Scheduler initialized at 2025-05-17 16:01:31
+2025-05-17 16:01:31,043 - INFO - News processing will run every hour
+2025-05-17 16:01:31,043 - INFO - Starting news processing at 2025-05-17 16:01:31
+2025-05-17 16:01:32,236 - INFO - Found 1 videos from channel UCupvZG-5ko_eiXAupbDfxWw
+2025-05-17 16:01:34,762 - INFO - Found 5 videos from channel UCBi2mrWuNuyYy4gbM6fU18Q
+2025-05-17 16:01:36,811 - INFO - Found 3 videos from channel UCeY0bbntWzzVIaj2z3QigXg
+2025-05-17 16:01:38,888 - INFO - Found 3 videos from channel UC16niRr50-MSBwiO3YDb3RA
+2025-05-17 16:01:40,424 - INFO - Found 0 videos from channel UCNye-wNBqNL5ZzHSJj3l8Bg
+2025-05-17 16:01:42,573 - INFO - Found 4 videos from channel UCIRYBXDze5krPDzAEOxFGVA
+2025-05-17 16:01:44,191 - INFO - Found 2 videos from channel UCJg9wBPyKMNA5sRDnvzmkdg
+2025-05-17 16:01:45,647 - INFO - Found 0 videos from channel UCUMZ7gohGI9HcU9VNsr2FJQ
+2025-05-17 16:01:48,069 - INFO - Found 5 videos from channel UChqUTb7kYRX8-EiaN3XFrSQ
+2025-05-17 16:01:50,048 - INFO - Found 3 videos from channel UCXIJgqnII2ZOINSWNOGFThA
+2025-05-17 16:01:51,050 - INFO - Processing video: Trump warns Iran that time is running out to make a deal #foxnews #shorts #trump #news #us #world
+2025-05-17 16:01:52,184 - INFO - Successfully retrieved transcript for video dR87enY8gDQ
+2025-05-17 16:01:54,920 - INFO - Summary:
+- The speaker expresses openness to trading with Iran, viewing trade as a tool for conflict resolution.
+- The speaker emphasizes the urgency of reaching a trade deal with Iran to prevent them from acquiring nuclear weapons.
+- A deal with Iran, according to the speaker, will benefit both sides significantly.
+- The speaker expresses disapproval of those downplaying the urgency of reaching a deal with Iran.
+
+2025-05-17 16:01:54,934 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-05-17 16:01:57,219 - INFO - Updated Google Sheet: 6 cells updated
+2025-05-17 16:01:57,221 - INFO - Successfully updated Google Sheet
+2025-05-17 16:01:59,227 - INFO - Processing video: Zelensky says Putin was &#39;afraid&#39; for talks
+2025-05-17 16:02:00,004 - WARNING - No transcript available for video H-YbPNECZQs: 
+Could not retrieve a transcript for the video https://www.youtube.com/watch?v=H-YbPNECZQs! This is most likely caused by:
+
+Subtitles are disabled for this video
+
+If you are sure that the described cause is not responsible for this error and that a transcript should be retrievable, please create an issue at https://github.com/jdepoix/youtube-transcript-api/issues. Please add which version of youtube_transcript_api you are using and provide the information needed to replicate the error. Also make sure that there are no open issues which already describe your problem!
+2025-05-17 16:02:00,005 - INFO - No YouTube transcript available. Falling back to AWS transcription...
+2025-05-17 16:02:01,442 - INFO - downloading (552617 total bytes) file to buffer
+2025-05-17 16:02:03,760 - INFO - Downloaded audio from: Zelensky says Putin was 'afraid' for talks
+2025-05-17 16:02:07,253 - INFO - Successfully uploaded news_audio_f22b9273afe54e6085b614eb54c59d11.mp3 to S3 bucket ytbucket-007
+2025-05-17 16:02:08,893 - INFO - Waiting for transcription to complete...
+2025-05-17 16:02:41,515 - INFO - Transcription completed successfully
+2025-05-17 16:02:42,667 - INFO - Summary:
+- A proposed meeting between the speaker and Putin in Turkey to discuss ending the war was rejected by Putin.
+- The speaker expressed willingness for a direct meeting in Ankara or Istanbul to resolve key issues.
+- Putin's refusal was highlighted by the low-level Russian delegation sent to Istanbul, lacking decision-making authority.
+- The speaker believes a significant opportunity to end the war was missed due to Putin's actions.
+
+2025-05-17 16:02:42,673 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-05-17 16:02:44,322 - INFO - Updated Google Sheet: 6 cells updated
+2025-05-17 16:02:44,322 - INFO - Successfully updated Google Sheet
+2025-05-17 16:02:46,337 - INFO - Processing video: Chris Brown remanded in custody after being accused of attacking man in London nightclub | BBC News
+2025-05-17 16:02:48,010 - INFO - Successfully retrieved transcript for video KpT46WJKMfg
+2025-05-17 16:02:49,412 - INFO - Summary:
+- Chris Brown, 36, appeared in Manchester Magistrate's Court charged with grievous bodily harm with intent stemming from a February 2023 nightclub assault in London.
+-  Brown, who arrived in the UK for a tour, was arrested and appeared in court, confirming his personal details but not entering a plea.
+- The hearing lasted approximately 40 minutes, attracting significant media attention; Brown was remanded in custody until his next court appearance on June 13th at Southern Crown Court.
+- Brown is scheduled to perform multiple shows in the UK, including three in Manchester, in the coming months.
+
+2025-05-17 16:02:49,418 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-05-17 16:02:51,275 - INFO - Updated Google Sheet: 6 cells updated
+2025-05-17 16:02:51,276 - INFO - Successfully updated Google Sheet
+2025-05-17 16:02:53,283 - INFO - Processing video: Deadly Israeli airstrikes target Hamas in Gaza
+2025-05-17 16:02:54,543 - ERROR - Error retrieving transcript for video -neGir1TfCE: no element found: line 1, column 0
+2025-05-17 16:02:54,543 - INFO - No YouTube transcript available. Falling back to AWS transcription...
+2025-05-17 16:02:56,318 - INFO - downloading (1324427 total bytes) file to buffer
+2025-05-17 16:02:58,392 - INFO - Downloaded audio from: Deadly Israeli airstrikes target Hamas in Gaza
+2025-05-17 16:03:02,103 - INFO - Successfully uploaded news_audio_ecdc7c30e3b04c6e9354f0b92952dd16.mp3 to S3 bucket ytbucket-007
+2025-05-17 16:03:03,645 - INFO - Waiting for transcription to complete...
+2025-05-17 16:03:36,474 - INFO - Transcription completed successfully
+2025-05-17 16:03:38,019 - INFO - Summary:
+- Israel launched a new wave of airstrikes in Gaza, targeting over 150 Hamas sites, resulting in at least 250 Palestinian deaths (half reportedly children) in 36 hours, according to Hamas health ministry.
+- The strikes come amidst a humanitarian crisis in Gaza, with a 10-week Israeli blockade causing widespread food shortages and threatening famine.
+-  A potential plan to relocate up to one million Palestinians from Gaza to Libya is reportedly under consideration by the Trump administration, though details remain unclear and no agreement has been reached.
+-  These events unfold as President Trump concludes a Middle East trip focused on strengthening US ties with Arab nations.
+
+2025-05-17 16:03:38,021 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-05-17 16:03:39,720 - INFO - Updated Google Sheet: 6 cells updated
+2025-05-17 16:03:39,721 - INFO - Successfully updated Google Sheet
+2025-05-17 16:03:41,734 - INFO - Processing video: Pence: ‘It’s just a bad idea’ for Trump to accept plane from Qatar
+2025-05-17 16:03:43,204 - INFO - Successfully retrieved transcript for video CdJKzcBzCZY
+2025-05-17 16:03:44,534 - INFO - Summary:
+- A Qatari offer of a military aircraft (potentially a replacement Air Force One) to President Trump is raising serious concerns.
+- The speaker argues this is unwise due to Qatar's history of supporting groups like Hamas and Al Qaeda, and funding anti-American protests.
+- Concerns exist regarding potential intelligence gathering risks, the President's security, and potential constitutional violations prohibiting accepting gifts from foreign states.
+-  The speaker suggests Qatar instead invest the funds in US military base infrastructure.
+
+2025-05-17 16:03:44,541 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-05-17 16:03:46,069 - INFO - Updated Google Sheet: 6 cells updated
+2025-05-17 16:03:46,070 - INFO - Successfully updated Google Sheet
+2025-05-17 16:03:49,175 - INFO - Deleted 4 files from S3
+2025-05-17 16:03:49,177 - INFO - Completed processing run at 2025-05-17 16:03:49
+2025-05-17 16:03:49,178 - INFO - Successfully processed 5 out of 5 videos
+2025-05-17 16:03:49,178 - INFO - Processing took 138.133275 seconds
+2025-05-18 16:28:52,410 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-05-18 16:28:52,412 - INFO - Scheduler initialized at 2025-05-18 16:28:52
+2025-05-18 16:28:52,413 - INFO - News processing will run every hour
+2025-05-18 16:28:52,413 - INFO - Starting news processing at 2025-05-18 16:28:52
+2025-05-18 16:28:53,166 - INFO - Found 0 videos from channel UCupvZG-5ko_eiXAupbDfxWw
+2025-05-18 16:28:55,322 - INFO - Found 5 videos from channel UCBi2mrWuNuyYy4gbM6fU18Q
+2025-05-18 16:28:57,017 - INFO - Found 2 videos from channel UCeY0bbntWzzVIaj2z3QigXg
+2025-05-18 16:28:58,384 - INFO - Found 1 videos from channel UC16niRr50-MSBwiO3YDb3RA
+2025-05-18 16:29:00,080 - INFO - Found 2 videos from channel UCNye-wNBqNL5ZzHSJj3l8Bg
+2025-05-18 16:29:01,484 - INFO - Found 0 videos from channel UCIRYBXDze5krPDzAEOxFGVA
+2025-05-18 16:29:03,086 - INFO - Found 1 videos from channel UCJg9wBPyKMNA5sRDnvzmkdg
+2025-05-18 16:29:04,489 - INFO - Found 0 videos from channel UCUMZ7gohGI9HcU9VNsr2FJQ
+2025-05-18 16:29:06,608 - INFO - Found 5 videos from channel UChqUTb7kYRX8-EiaN3XFrSQ
+2025-05-18 16:29:08,303 - INFO - Found 2 videos from channel UCXIJgqnII2ZOINSWNOGFThA
+2025-05-18 16:29:09,309 - INFO - Processing video: ‘HISTORIC’: Trump touts Middle East economic wins from Air Force One #foxnews #short #trump
+2025-05-18 16:29:10,473 - INFO - Successfully retrieved transcript for video vN9sUsi3X_8
+2025-05-18 16:29:12,663 - INFO - Summary:
+- The speaker describes the past four days as historic.
+- Significant job creation and investment are reported in unspecified countries.
+- The speaker expresses overwhelmingly positive sentiment regarding the outcomes.
+-  The scale of the economic impact is described as unprecedented.
+
+2025-05-18 16:29:12,666 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-05-18 16:29:14,641 - INFO - Updated Google Sheet: 6 cells updated
+2025-05-18 16:29:14,642 - INFO - Successfully updated Google Sheet
+2025-05-18 16:29:16,657 - INFO - Processing video: Russia demands Ukraine pull troops before ceasefire | REUTERS
+2025-05-18 16:29:18,067 - INFO - Successfully retrieved transcript for video 28WoXKIoAS4
+2025-05-18 16:29:19,302 - INFO - Summary:
+- A Russian drone strike in northeastern Ukraine's Sumy region killed at least nine bus passengers.
+- Footage shows rescue workers recovering bodies from the destroyed bus.
+-  Following the attack, Ukrainian President Zelensky called for stronger sanctions against Russia, citing the attack as a deliberate killing of civilians.
+-  While a prisoner exchange was agreed upon at recent Russia-Ukraine talks in Istanbul,  Russia's proposed condition for a ceasefire—Ukraine's troop withdrawal from territories claimed by Moscow—prevented a truce agreement.
+
+2025-05-18 16:29:19,304 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-05-18 16:29:20,672 - INFO - Updated Google Sheet: 6 cells updated
+2025-05-18 16:29:20,672 - INFO - Successfully updated Google Sheet
+2025-05-18 16:29:22,673 - INFO - Processing video: Trump says he will speak with Putin, Zelenskiy on Monday | REUTERS
+2025-05-18 16:29:23,691 - INFO - Successfully retrieved transcript for video BVU_HeJE5aY
+2025-05-18 16:29:24,941 - INFO - Summary:
+- Donald Trump announced he will speak with Vladimir Putin on Monday to discuss ending the war in Ukraine, followed by a conversation with Volodymyr Zelenskyy.
+- This follows face-to-face talks between Russian and Ukrainian officials in Turkey—their first since March 2022—where Russia demanded Ukrainian troop withdrawals from all Moscow-claimed regions as a ceasefire condition.
+- Trump's call aims to stop the ongoing conflict causing heavy casualties, and also discuss trade.  
+-  Uncertainty remains regarding Russia's sincerity in seeking a ceasefire, with US Secretary of State Rubio expressing skepticism.
+
+2025-05-18 16:29:24,947 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-05-18 16:29:26,175 - INFO - Updated Google Sheet: 6 cells updated
+2025-05-18 16:29:26,176 - INFO - Successfully updated Google Sheet
+2025-05-18 16:29:28,176 - INFO - Processing video: An Italian mouse awards the UK 12 Eurovision points. #Eurovision #BBCNews
+2025-05-18 16:29:29,188 - INFO - Successfully retrieved transcript for video DZKx0Z3bWzw
+2025-05-18 16:29:30,085 - INFO - Summary:
+- The United Kingdom received 12 points in a competition.
+- The announcement was met with excitement ("My whiskers are quivering").
+-  The 12 points came from every Monday (presumably referring to a voting system across multiple Mondays).
+- The high score of 12 points made the win particularly special.
+
+2025-05-18 16:29:30,089 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-05-18 16:29:31,332 - INFO - Updated Google Sheet: 6 cells updated
+2025-05-18 16:29:31,332 - INFO - Successfully updated Google Sheet
+2025-05-18 16:29:33,332 - INFO - Processing video: Israeli strikes kill over 145 in Gaza in 24 hours: officials | REUTERS
+2025-05-18 16:29:34,593 - ERROR - Error retrieving transcript for video _3gC7EwZCSo: no element found: line 1, column 0
+2025-05-18 16:29:34,594 - INFO - No YouTube transcript available. Falling back to AWS transcription...
+2025-05-18 16:29:35,737 - INFO - downloading (480395 total bytes) file to buffer
+2025-05-18 16:29:36,293 - INFO - Downloaded audio from: Israeli strikes kill over 145 in Gaza in 24 hours: officials | REUTERS
+2025-05-18 16:29:39,016 - INFO - Successfully uploaded news_audio_7b8dc9d31b0848be8fd0e20500195de4.mp3 to S3 bucket ytbucket-007
+2025-05-18 16:29:40,344 - INFO - Waiting for transcription to complete...
+2025-05-18 16:30:12,379 - INFO - Transcription completed successfully
+2025-05-18 16:30:13,376 - INFO - Summary:
+- Residents of the Aqsa tented camp have been attacked 13 times.
+- The camp was sought as a refuge from prior bombings of their homes.
+- Residents are civilians who feel unjustly targeted and are pleading for help and safety.
+-  The attacks raise questions about the targeting of civilians and lack of safe havens.
+
+2025-05-18 16:30:13,382 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-05-18 16:30:14,689 - INFO - Updated Google Sheet: 6 cells updated
+2025-05-18 16:30:14,691 - INFO - Successfully updated Google Sheet
+2025-05-18 16:30:17,668 - INFO - Deleted 2 files from S3
+2025-05-18 16:30:17,669 - INFO - Completed processing run at 2025-05-18 16:30:17
+2025-05-18 16:30:17,670 - INFO - Successfully processed 5 out of 5 videos
+2025-05-18 16:30:17,671 - INFO - Processing took 85.256461 seconds
