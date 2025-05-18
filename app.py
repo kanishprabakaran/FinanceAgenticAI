@@ -320,7 +320,7 @@ sentiment_agent = Agent(
 risk_agent = Agent(
     name="Risk Analysis Agent",
     role="Identify potential financial or reputational risks",
-    model =groq_model,
+    model=groq_model,
     tools=[
         ddg_tool,
         YFinanceTools(
@@ -685,6 +685,24 @@ def sanitize_prompt(prompt: str) -> str:
         prompt = re.sub(pattern, "[REDACTED]", prompt, flags=re.IGNORECASE)
     return prompt.strip()
 
+def is_general_question(user_input: str) -> bool:
+    """Check if the question is general and not specific to our agents' domains."""
+    # List of keywords that indicate specific agent domains
+    specific_keywords = [
+        'financial', 'sentiment', 'risk', 'recommendation', 
+        'news', 'headline', 'macroeconomic', 'GDP', 'inflation',
+        'unemployment', 'stock', 'buy', 'sell', 'hold', 'price',
+        'trending', 'youtube', 'channel', 'views'
+    ]
+    
+    # Check if any specific keywords are present
+    for keyword in specific_keywords:
+        if keyword.lower() in user_input.lower():
+            return False
+    
+    # If no specific keywords found, treat as general question
+    return True
+
 def run_analysis(entity: str, analysis_type: str) -> None:
     """Run the appropriate analysis based on the detected type."""
     clean_entity = sanitize_prompt(entity)
@@ -776,6 +794,28 @@ def full_stock_analysis(company_name: str) -> None:
 
 def process_user_query(user_input: str) -> None:
     """Main function to handle natural language input with support for multiple requests."""
+    # First check if this is a general question
+    if is_general_question(user_input):
+        print("\n🤖 General Knowledge Response:")
+        try:
+            # Create a temporary agent for general questions
+            general_agent = Agent(
+                name="General Knowledge Agent",
+                model=groq_model,
+                instructions=[
+                    "You are a helpful AI assistant that answers general knowledge questions",
+                    "Provide clear, concise answers to the user's questions",
+                    "If the question is about finance or economics, provide additional context",
+                    "For technical questions, break down complex concepts into simple terms"
+                ],
+                markdown=True
+            )
+            general_agent.print_response(user_input, stream=True)
+        except Exception as e:
+            print(f"Error processing general question: {e}")
+        return
+    
+    # Otherwise proceed with specialized analysis
     analysis_requests = classify_intent_and_extract_entities(user_input)
     
     if not analysis_requests or "requests" not in analysis_requests or not analysis_requests["requests"]:
@@ -798,8 +838,11 @@ def process_user_query(user_input: str) -> None:
 def main() -> None:
     """Main interaction loop."""
     print("💹 Stock Analysis Assistant - Enter your query (e.g., 'Should I buy Apple stock?' or 'GDP of USA') or say 'voice' for audio input")
-    print("💡 Pro tip: You can combine multiple requests in one query, like 'Show me Apple financials and news about Tesla' or 'GDP and news of Pakistan'")
-    print("📰 For top news, try: 'Show me today's top headlines' or 'What's trending on YouTube?'")
+    print("💡 Pro tip: You can ask:")
+    print("- Specific questions about stocks, companies, or economies")
+    print("- General questions like 'Why is INR value increasing this month?'")
+    print("- 'Show me today's top headlines' or 'What's trending on YouTube?'")
+    print("- 'voice' for audio input or 'quit' to exit")
     
     while True:
         try:
