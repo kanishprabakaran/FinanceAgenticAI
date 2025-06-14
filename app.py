@@ -7,6 +7,15 @@ import wave
 from datetime import datetime
 from typing import Dict, List
 
+import time
+import psutil
+import tracemalloc
+import matplotlib.pyplot as plt
+from io import StringIO
+from typing import Dict, List, Tuple, Optional
+from dataclasses import dataclass, field
+from collections import defaultdict
+
 import boto3
 import gspread
 import numpy as np
@@ -835,6 +844,410 @@ def process_user_query(user_input: str) -> None:
             
         run_analysis(entity=entity, analysis_type=analysis_type)
 
+@dataclass
+class PerformanceMetrics:
+    execution_time: float = 0.0
+    memory_usage: float = 0.0  # in MB
+    api_calls: int = 0
+    errors: int = 0
+    input_size: int = 0  # characters for text, bytes for audio
+    output_size: int = 0  # characters for text, bytes for binary
+    autonomy_score: float = 0.0  # 0-1 scale (1 = fully autonomous)
+    accuracy_score: float = 0.0  # 0-1 scale (1 = perfectly accurate)
+    human_interventions: int = 0  # times human input was needed
+    correctness_checks: int = 0  # times the system verified its own output
+
+@dataclass
+class AgentPerformance:
+    total_calls: int = 0
+    metrics: Dict[str, PerformanceMetrics] = field(default_factory=dict)
+    total_time: float = 0.0
+    total_memory: float = 0.0
+
+class PerformanceMonitor:
+    def __init__(self):
+        self.agent_stats: Dict[str, AgentPerformance] = defaultdict(AgentPerformance)
+        self.tool_stats: Dict[str, Dict[str, PerformanceMetrics]] = defaultdict(dict)
+        self.system_start_time = time.time()
+        self.system_memory_start = psutil.Process().memory_info().rss / (1024 * 1024)  # MB
+        tracemalloc.start()
+    
+    def calculate_autonomy(self, agent_name: str) -> float:
+        """Calculate autonomy score (0-1) based on human interventions vs autonomous decisions"""
+        agent_stats = self.agent_stats.get(agent_name)
+        if not agent_stats:
+            return 0.0
+        
+        total_calls = agent_stats.total_calls
+        if total_calls == 0:
+            return 0.0
+        
+        total_interventions = sum(m.human_interventions for m in agent_stats.metrics.values())
+        autonomy = 1 - (total_interventions / total_calls)
+        return max(0.0, min(1.0, autonomy))  # Ensure between 0-1
+    
+    def calculate_accuracy(self, agent_name: str) -> float:
+        """Calculate accuracy score (0-1) based on correctness checks and errors"""
+        agent_stats = self.agent_stats.get(agent_name)
+        if not agent_stats:
+            return 0.0
+        
+        total_calls = agent_stats.total_calls
+        if total_calls == 0:
+            return 0.0
+        
+        total_checks = sum(m.correctness_checks for m in agent_stats.metrics.values())
+        total_errors = sum(m.errors for m in agent_stats.metrics.values())
+        
+        if total_checks == 0:
+            return 0.0
+    
+        accuracy = 1 - (total_errors / total_checks)
+        return max(0.0, min(1.0, accuracy))  # Ensure between 0-1
+    
+        
+    def track_agent(self, agent_name: str, check_correctness: bool = True):
+        """Decorator to track agent performance with autonomy and accuracy metrics"""
+        def decorator(func):
+            def wrapper(*args, **kwargs):
+                start_time = time.time()
+                start_mem = tracemalloc.get_traced_memory()[0] / (1024 * 1024)
+
+                # Track input size
+                input_size = 0
+                if args and isinstance(args[0], str):
+                    input_size = len(args[0])
+                elif kwargs.get('user_input'):
+                    input_size = len(kwargs['user_input'])
+
+                result = None
+                human_intervention = 0
+                correctness_check = 0
+
+                try:
+                    result = func(*args, **kwargs)
+                    error_count = 0
+
+                    # Check if human input was required
+                    if "human_input" in kwargs and kwargs["human_input"]:
+                        human_intervention = 1
+
+                    # Perform correctness check if enabled
+                    if check_correctness and result:
+                        correctness_check = 1
+                        # Simple check for error messages in output
+                        if isinstance(result, str) and any(
+                            err in result.lower()
+                            for err in ["error", "fail", "not found", "unavailable"]
+                        ):
+                            error_count = 1
+
+                except Exception as e:
+                    error_count = 1
+                    raise e
+                finally:
+                    end_time = time.time()
+                    end_mem = tracemalloc.get_traced_memory()[0] / (1024 * 1024)
+
+                    # Track output size
+                    output_size = 0
+                    if result and isinstance(result, str):
+                        output_size = len(result)
+
+                    metrics = PerformanceMetrics(
+                        execution_time=end_time - start_time,
+                        memory_usage=end_mem - start_mem,
+                        errors=error_count,
+                        input_size=input_size,
+                        output_size=output_size,
+                        human_interventions=human_intervention,
+                        correctness_checks=correctness_check,
+                        autonomy_score=self.calculate_autonomy(agent_name),
+                        accuracy_score=self.calculate_accuracy(agent_name)
+                    )
+
+                    agent_perf = self.agent_stats[agent_name]
+                    agent_perf.total_calls += 1
+                    agent_perf.total_time += metrics.execution_time
+                    agent_perf.total_memory += metrics.memory_usage
+
+                    # Store metrics by timestamp
+                    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                    agent_perf.metrics[timestamp] = metrics
+
+                return result
+            return wrapper
+        return decorator
+    
+    def track_tool(self, tool_name: str, api_name: str):
+        """Decorator to track tool API performance"""
+        def decorator(func):
+            def wrapper(*args, **kwargs):
+                start_time = time.time()
+                start_mem = tracemalloc.get_traced_memory()[0] / (1024 * 1024)
+                
+                result = None
+                try:
+                    result = func(*args, **kwargs)
+                    error_count = 0
+                except Exception as e:
+                    error_count = 1
+                    raise e
+                finally:
+                    end_time = time.time()
+                    end_mem = tracemalloc.get_traced_memory()[0] / (1024 * 1024)
+                    
+                    metrics = PerformanceMetrics(
+                        execution_time=end_time - start_time,
+                        memory_usage=end_mem - start_mem,
+                        api_calls=1,
+                        errors=error_count
+                    )
+                    
+                    if tool_name not in self.tool_stats:
+                        self.tool_stats[tool_name] = {}
+                    self.tool_stats[tool_name][api_name] = metrics
+                
+                return result
+            return wrapper
+        return decorator
+    
+    def generate_report(self) -> str:
+        """Generate comprehensive performance report"""
+        report = StringIO()
+        total_runtime = time.time() - self.system_start_time
+        current_memory = psutil.Process().memory_info().rss / (1024 * 1024)
+        
+        # System Summary
+        report.write("="*50 + "\n")
+        report.write("📊 SYSTEM PERFORMANCE REPORT\n")
+        report.write("="*50 + "\n\n")
+        report.write(f"🕒 Total Runtime: {total_runtime:.2f} seconds\n")
+        report.write(f"🧠 Memory Usage: {current_memory:.2f} MB (Initial: {self.system_memory_start:.2f} MB)\n")
+        report.write(f"👥 Agents Executed: {len(self.agent_stats)}\n")
+        report.write(f"🛠️ Tools Used: {len(self.tool_stats)}\n\n")
+        
+        # Agent Performance
+        report.write("="*50 + "\n")
+        report.write("🤖 AGENT PERFORMANCE\n")
+        report.write("="*50 + "\n")
+        for agent_name, stats in self.agent_stats.items():
+            avg_time = stats.total_time / stats.total_calls if stats.total_calls else 0
+            avg_mem = stats.total_memory / stats.total_calls if stats.total_calls else 0
+            autonomy = self.calculate_autonomy(agent_name)
+            accuracy = self.calculate_accuracy(agent_name)
+            
+            report.write(f"\n🔹 {agent_name}:\n")
+            report.write(f"  - Calls: {stats.total_calls}\n")
+            report.write(f"  - Total Time: {stats.total_time:.2f}s (Avg: {avg_time:.2f}s)\n")
+            report.write(f"  - Total Memory: {stats.total_memory:.2f}MB (Avg: {avg_mem:.2f}MB)\n")
+            report.write(f"  - Autonomy Score: {autonomy:.2%}\n")
+            report.write(f"  - Accuracy Score: {accuracy:.2%}\n")
+            report.write(f"  - Human Interventions: {sum(m.human_interventions for m in stats.metrics.values())}\n")
+            report.write(f"  - Correctness Checks: {sum(m.correctness_checks for m in stats.metrics.values())}\n")
+            
+            # Find slowest call
+            slowest = max(
+                [(ts, m.execution_time) for ts, m in stats.metrics.items()],
+                key=lambda x: x[1],
+                default=("None", 0)
+            )
+            report.write(f"  - Slowest Call: {slowest[1]:.2f}s at {slowest[0]}\n")
+            
+            # Input/output stats
+            total_input = sum(m.input_size for m in stats.metrics.values())
+            total_output = sum(m.output_size for m in stats.metrics.values())
+            report.write(f"  - Total Input: {total_input} chars\n")
+            report.write(f"  - Total Output: {total_output} chars\n")
+        
+        # Tool Performance
+        report.write("\n" + "="*50 + "\n")
+        report.write("🛠️ TOOL PERFORMANCE\n")
+        report.write("="*50 + "\n")
+        for tool_name, apis in self.tool_stats.items():
+            report.write(f"\n🔧 {tool_name}:\n")
+            for api_name, metrics in apis.items():
+                report.write(f"  - {api_name}:\n")
+                report.write(f"    - Time: {metrics.execution_time:.2f}s\n")
+                report.write(f"    - Memory: {metrics.memory_usage:.2f}MB\n")
+                report.write(f"    - API Calls: {metrics.api_calls}\n")
+                if metrics.errors:
+                    report.write(f"    - Errors: {metrics.errors}\n")
+        
+        # Recommendations
+        report.write("\n" + "="*50 + "\n")
+        report.write("💡 OPTIMIZATION RECOMMENDATIONS\n")
+        report.write("="*50 + "\n")
+        
+        # Find slowest agent
+        if self.agent_stats:
+            slowest_agent = max(
+                [(name, stats.total_time) for name, stats in self.agent_stats.items()],
+                key=lambda x: x[1]
+            )
+            report.write(f"\n🐌 Slowest Agent: {slowest_agent[0]} ({slowest_agent[1]:.2f}s)\n")
+            report.write("   - Consider optimizing its prompts or reducing tool calls\n")
+        
+        # Find memory-intensive agents
+        memory_hogs = sorted(
+            [(name, stats.total_memory) for name, stats in self.agent_stats.items()],
+            key=lambda x: -x[1]
+        )[:3]
+        if memory_hogs:
+            report.write("\n🧠 Memory Intensive Agents:\n")
+            for name, mem in memory_hogs:
+                report.write(f"   - {name}: {mem:.2f}MB\n")
+            report.write("   - Consider streaming responses or reducing context size\n")
+        
+        # Find error-prone tools
+        error_tools = []
+        for tool_name, apis in self.tool_stats.items():
+            tool_errors = sum(m.errors for m in apis.values())
+            if tool_errors:
+                error_tools.append((tool_name, tool_errors))
+        
+        if error_tools:
+            report.write("\n❌ Error-Prone Tools:\n")
+            for tool, err_count in sorted(error_tools, key=lambda x: -x[1]):
+                report.write(f"   - {tool}: {err_count} errors\n")
+            report.write("   - Check API keys, rate limits, and error handling\n")
+        
+        # Add evaluation section
+        report.write("\n" + "="*50 + "\n")
+        report.write("📈 SYSTEM EVALUATION\n")
+        report.write("="*50 + "\n")
+        
+        # Calculate overall scores
+        total_agents = len(self.agent_stats)
+        if total_agents > 0:
+            avg_autonomy = sum(self.calculate_autonomy(name) for name in self.agent_stats) / total_agents
+            avg_accuracy = sum(self.calculate_accuracy(name) for name in self.agent_stats) / total_agents
+            total_interventions = sum(
+                sum(m.human_interventions for m in stats.metrics.values())
+                for stats in self.agent_stats.values()
+            )
+            
+            report.write(f"\n🔍 Overall Evaluation:\n")
+            report.write(f"  - Average Autonomy: {avg_autonomy:.2%}\n")
+            report.write(f"  - Average Accuracy: {avg_accuracy:.2%}\n")
+            report.write(f"  - Total Human Interventions: {total_interventions}\n")
+            
+            # Evaluation criteria
+            report.write("\n📝 Evaluation Criteria:\n")
+            report.write("  - Autonomy: 1.0 = fully autonomous, 0.5 = needs some human input, 0 = fully manual\n")
+            report.write("  - Accuracy: 1.0 = perfect outputs, 0.8 = minor errors, 0.5 = frequent errors\n")
+            report.write("  - Ideal system: Autonomy > 0.9, Accuracy > 0.95\n")
+        
+        return report.getvalue()
+    
+    def show_performance_charts(self):
+        """Display performance charts including evaluation metrics"""
+        try:
+            # Agent Time Distribution
+            plt.figure(figsize=(10, 5))
+            agents = list(self.agent_stats.keys())
+            times = [stats.total_time for stats in self.agent_stats.values()]
+            plt.barh(agents, times, color='skyblue')
+            plt.title('Agent Execution Time Distribution')
+            plt.xlabel('Total Time (seconds)')
+            plt.tight_layout()
+            plt.show()
+            
+            # Memory Usage
+            plt.figure(figsize=(10, 5))
+            mem_usage = [stats.total_memory for stats in self.agent_stats.values()]
+            plt.barh(agents, mem_usage, color='lightgreen')
+            plt.title('Agent Memory Usage')
+            plt.xlabel('Total Memory (MB)')
+            plt.tight_layout()
+            plt.show()
+            
+            # API Calls by Tool
+            if self.tool_stats:
+                plt.figure(figsize=(10, 5))
+                tools = []
+                calls = []
+                for tool, apis in self.tool_stats.items():
+                    for api, metrics in apis.items():
+                        tools.append(f"{tool}.{api}")
+                        calls.append(metrics.api_calls)
+                plt.barh(tools, calls, color='salmon')
+                plt.title('API Calls by Tool')
+                plt.xlabel('Number of Calls')
+                plt.tight_layout()
+                plt.show()
+            
+            # Evaluation Metrics Radar Chart
+            if len(self.agent_stats) > 0:
+                plt.figure(figsize=(8, 8))
+                agents = list(self.agent_stats.keys())
+                
+                # Get metrics for each agent
+                autonomy = [self.calculate_autonomy(name) for name in agents]
+                accuracy = [self.calculate_accuracy(name) for name in agents]
+                
+                # Normalize time and memory for radar chart
+                max_time = max(s.total_time for s in self.agent_stats.values()) or 1
+                times = [s.total_time / max_time for s in self.agent_stats.values()]
+                
+                max_mem = max(s.total_memory for s in self.agent_stats.values()) or 1
+                mems = [s.total_memory / max_mem for s in self.agent_stats.values()]
+                
+                categories = ['Autonomy', 'Accuracy', 'Speed (1-slow)', 'Memory Efficiency']
+                N = len(categories)
+                
+                angles = [n / float(N) * 2 * np.pi for n in range(N)]
+                angles += angles[:1]
+                
+                ax = plt.subplot(111, polar=True)
+                for idx, agent in enumerate(agents):
+                    values = [
+                        autonomy[idx],
+                        accuracy[idx],
+                        1 - times[idx],  # Invert so higher is better
+                        1 - mems[idx]    # Invert so higher is better
+                    ]
+                    values += values[:1]
+                    
+                    ax.plot(angles, values, linewidth=1, linestyle='solid', label=agent)
+                    ax.fill(angles, values, alpha=0.1)
+                
+                plt.title('Agent Evaluation Radar Chart', size=20, y=1.1)
+                ax.set_xticks(angles[:-1])
+                ax.set_xticklabels(categories)
+                ax.set_rlabel_position(0)
+                plt.yticks([0.2, 0.4, 0.6, 0.8, 1.0], ["0.2", "0.4", "0.6", "0.8", "1.0"], color="grey", size=7)
+                plt.ylim(0, 1)
+                plt.legend(loc='upper right', bbox_to_anchor=(1.3, 1.1))
+                plt.tight_layout()
+                plt.show()
+        except Exception as e:
+            print(f"⚠️ Could not display charts: {e}")
+
+# Initialize performance monitor
+monitor = PerformanceMonitor()
+
+# Decorate agent functions
+finance_agent.run = monitor.track_agent("Finance Agent", check_correctness=True)(finance_agent.run)
+sentiment_agent.run = monitor.track_agent("Sentiment Agent", check_correctness=True)(sentiment_agent.run)
+risk_agent.run = monitor.track_agent("Risk Agent", check_correctness=True)(risk_agent.run)
+web_search_agent.run = monitor.track_agent("Web Search Agent", check_correctness=True)(web_search_agent.run)
+news_agent.run = monitor.track_agent("News Agent", check_correctness=True)(news_agent.run)
+youtube_news_agent.run = monitor.track_agent("YouTube News Agent", check_correctness=True)(youtube_news_agent.run)
+combined_news_agent.run = monitor.track_agent("Combined News Agent", check_correctness=True)(combined_news_agent.run)
+macroeconomic_agent.run = monitor.track_agent("Macroeconomic Agent", check_correctness=True)(macroeconomic_agent.run)
+portfolio_strategy_agent.run = monitor.track_agent("Portfolio Strategy Agent", check_correctness=True)(portfolio_strategy_agent.run)
+
+# Decorate tool methods
+YouTubeNewsTools.get_top_news = monitor.track_tool("YouTubeNewsTools", "get_top_news")(YouTubeNewsTools.get_top_news)
+NewsAPITools.get_top_headlines = monitor.track_tool("NewsAPITools", "get_top_headlines")(NewsAPITools.get_top_headlines)
+NewsAPITools.get_everything = monitor.track_tool("NewsAPITools", "get_everything")(NewsAPITools.get_everything)
+MacroEconomicTools.get_macroeconomic_data = monitor.track_tool("MacroEconomicTools", "get_macroeconomic_data")(MacroEconomicTools.get_macroeconomic_data)
+
+# Decorate other critical functions
+audio_to_text = monitor.track_agent("Audio Transcription", check_correctness=True)(audio_to_text)
+classify_intent_and_extract_entities = monitor.track_agent("Intent Classifier", check_correctness=True)(classify_intent_and_extract_entities)
+
 def main() -> None:
     """Main interaction loop."""
     print("💹 Stock Analysis Assistant - Enter your query (e.g., 'Should I buy Apple stock?' or 'GDP of USA') or say 'voice' for audio input")
@@ -843,13 +1256,22 @@ def main() -> None:
     print("- General questions like 'Why is INR value increasing this month?'")
     print("- 'Show me today's top headlines' or 'What's trending on YouTube?'")
     print("- 'voice' for audio input or 'quit' to exit")
+    print("- 'perf' to show performance metrics")
     
     while True:
         try:
             user_input = input("\nYour query (or 'quit' to exit): ").strip()
             
             if user_input.lower() in ['quit', 'exit']:
+                # Before exiting, show performance report
+                print("\n" + monitor.generate_report())
+                monitor.show_performance_charts()
                 break
+                
+            if user_input.lower() == 'perf':
+                print("\n" + monitor.generate_report())
+                monitor.show_performance_charts()
+                continue
                 
             if not user_input:
                 continue
@@ -866,9 +1288,19 @@ def main() -> None:
                 process_user_query(user_input)
                 
         except KeyboardInterrupt:
+            # On CTRL+C, show performance report before exiting
+            print("\n" + monitor.generate_report())
+            monitor.show_performance_charts()
             break
         except Exception as e:
             print(f"Error: {e}. Please try again.")
 
 if __name__ == "__main__":
     main()
+    
+    
+    
+    
+    
+    
+    
