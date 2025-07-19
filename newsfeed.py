@@ -16,6 +16,7 @@ import google.generativeai as genai
 import schedule
 import logging
 
+
 # Set up logging
 logging.basicConfig(
     level=logging.INFO,
