@@ -5,16 +5,14 @@ import re
 import time
 import wave
 from datetime import datetime
-from typing import Dict, List
+from typing import Dict, List, Tuple, Optional
+from dataclasses import dataclass, field
+from collections import defaultdict
 
-import time
 import psutil
 import tracemalloc
 import matplotlib.pyplot as plt
 from io import StringIO
-from typing import Dict, List, Tuple, Optional
-from dataclasses import dataclass, field
-from collections import defaultdict
 
 import boto3
 import gspread
@@ -32,6 +30,7 @@ from phi.tools import Toolkit
 from phi.tools.duckduckgo import DuckDuckGo
 from phi.tools.yfinance import YFinanceTools
 import google.generativeai as genai
+from docx import Document
 
 # Load API keys from .env
 load_dotenv()
@@ -116,7 +115,7 @@ class YouTubeNewsTools(Toolkit):
         
         try:
             sheet = self.client.open_by_key(NEWS_SHEET_ID).sheet1
-            records = sheet.get_all_records()
+            records = sheet.get_all_records() 
             
             if not records:
                 return "No news found in the YouTube news sheet."
@@ -712,6 +711,64 @@ def is_general_question(user_input: str) -> bool:
     # If no specific keywords found, treat as general question
     return True
 
+def compute_scores(
+    *,
+    classifier_confidence: float = 1.0,
+    fallback_used: bool = False,
+    human_override: bool = False,
+    misclassified: bool = False,
+    corrected: bool = False,
+    error_detected: bool = False,
+    total_checks: int = 1
+) -> Tuple[float, float]:
+    """
+    Compute autonomy and accuracy scores dynamically.
+    Returns (autonomy_score, accuracy_score) as floats 0-100 rounded to two decimals.
+    """
+    # --- Autonomy ---
+    autonomy = 1.0
+    context = []
+    if fallback_used:
+        autonomy -= 0.3
+        context.append("fallback used")
+    if human_override:
+        autonomy -= 0.5
+        context.append("human override")
+    autonomy = max(0.0, autonomy)
+    autonomy_score = round(autonomy * 100, 2)
+
+    # --- Accuracy ---
+    accuracy = classifier_confidence
+    if misclassified:
+        accuracy -= 0.3
+        context.append("misclassified")
+    if corrected:
+        accuracy += 0.1
+        context.append("corrected")
+    if error_detected:
+        accuracy -= 0.5
+        context.append("error detected")
+    accuracy = max(0.0, min(accuracy, 1.0))
+    accuracy_score = round(accuracy * 100, 2)
+
+    logger.info(
+        f"Score context: {', '.join(context) if context else 'normal'} | "
+        f"Autonomy: {autonomy_score} | Accuracy: {accuracy_score} | "
+        f"Confidence: {classifier_confidence}"
+    )
+    return autonomy_score, accuracy_score
+
+# Example usage in agent tracking:
+# autonomy_score, accuracy_score = compute_scores(
+#     classifier_confidence=classifier_confidence,
+#     fallback_used=fallback_used,
+#     human_override=human_intervention,
+#     misclassified=misclassified,
+#     corrected=corrected,
+#     error_detected=error_count > 0,
+#     total_checks=correctness_check
+# )
+
 def run_analysis(entity: str, analysis_type: str) -> None:
     """Run the appropriate analysis based on the detected type."""
     clean_entity = sanitize_prompt(entity)
@@ -828,7 +885,24 @@ def process_user_query(user_input: str) -> None:
     analysis_requests = classify_intent_and_extract_entities(user_input)
     
     if not analysis_requests or "requests" not in analysis_requests or not analysis_requests["requests"]:
-        print("⚠️ Could not understand your query. Please try again with a clearer request.")
+        print("\n🤖 General Knowledge Response:")
+        try:
+            # Directly use Groq model for general questions
+            general_agent = Agent(
+                name="General Knowledge Agent",
+                model=groq_model,
+                instructions=[
+                    "You are a helpful AI assistant that answers general knowledge questions",
+                    "Provide clear, concise answers to the user's questions",
+                    "If the question is about finance or economics, provide additional context",
+                    "For technical questions, break down complex concepts into simple terms"
+                ],
+                markdown=True
+            )
+            
+            general_agent.print_response(user_input, stream=True)
+        except Exception as e:
+            print(f"Error processing general question: {e}")
         return
     
     for idx, request in enumerate(analysis_requests["requests"]):
@@ -1248,6 +1322,23 @@ MacroEconomicTools.get_macroeconomic_data = monitor.track_tool("MacroEconomicToo
 audio_to_text = monitor.track_agent("Audio Transcription", check_correctness=True)(audio_to_text)
 classify_intent_and_extract_entities = monitor.track_agent("Intent Classifier", check_correctness=True)(classify_intent_and_extract_entities)
 
+def get_queries_from_docx(docx_path: str) -> list:
+    """Extracts queries from a .docx file, one per line/paragraph."""
+    
+    queries = []
+    try:
+        doc = Document(docx_path)
+        for para in doc.paragraphs:
+            text = para.text.strip()
+            if text:
+                # Remove leading numbering like "1. " if present
+                text = text.lstrip("0123456789. \t")
+                if text:
+                    queries.append(text)
+    except Exception as e:
+        print(f"Error reading queries.docx: {e}")
+    return queries
+
 def main() -> None:
     """Main interaction loop."""
     print("💹 Stock Analysis Assistant - Enter your query (e.g., 'Should I buy Apple stock?' or 'GDP of USA') or say 'voice' for audio input")
@@ -1257,25 +1348,36 @@ def main() -> None:
     print("- 'Show me today's top headlines' or 'What's trending on YouTube?'")
     print("- 'voice' for audio input or 'quit' to exit")
     print("- 'perf' to show performance metrics")
-    
+    print("- 'autoquery' to run all queries from queries.docx")
+
     while True:
         try:
             user_input = input("\nYour query (or 'quit' to exit): ").strip()
             
             if user_input.lower() in ['quit', 'exit']:
-                # Before exiting, show performance report
                 print("\n" + monitor.generate_report())
                 monitor.show_performance_charts()
                 break
-                
+
             if user_input.lower() == 'perf':
                 print("\n" + monitor.generate_report())
                 monitor.show_performance_charts()
                 continue
-                
+
+            if user_input.lower() == 'autoquery':
+                queries = get_queries_from_docx("queries.docx")
+                if not queries:
+                    print("No queries found in queries.docx.")
+                    continue
+                print(f"\n📄 Running {len(queries)} queries from queries.docx...\n")
+                for idx, q in enumerate(queries, 1):
+                    print(f"\n{'='*20} Query {idx} {'='*20}\n")
+                    process_user_query(q)
+                continue
+
             if not user_input:
                 continue
-                
+
             if user_input.lower() == 'voice':
                 print("\n🎤 Voice input selected. Recording for 5 seconds...")
                 transcript = audio_to_text()
@@ -1286,9 +1388,8 @@ def main() -> None:
                     print("Failed to process audio input. Please try again or type your query.")
             else:
                 process_user_query(user_input)
-                
+
         except KeyboardInterrupt:
-            # On CTRL+C, show performance report before exiting
             print("\n" + monitor.generate_report())
             monitor.show_performance_charts()
             break
@@ -1297,10 +1398,9 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
